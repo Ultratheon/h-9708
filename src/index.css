@@ -58,21 +58,14 @@
 @keyframes bubble-float {
   0% {
     transform: translateX(0);
-    opacity: 1;
-  }
-  50% {
-    transform: translateX(10px);
-    opacity: 0.7;
   }
   100% {
-    transform: translateX(0);
-    opacity: 1;
+    transform: translateX(15px);
   }
 }
 
 .bubble-animation {
-  animation: bubble-float 3s ease-in-out infinite;
-  animation-delay: 0.8s;
+  animation: bubble-float 1.5s ease-in-out infinite alternate;
 }
 
 @keyframes float {
