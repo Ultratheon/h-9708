@@ -67,7 +67,7 @@ const Hero = () => {
               <div 
                 key={`top-${index}`}
                 className="speech-bubble bg-neutral-800 text-white px-4 py-2 rounded-full text-sm animate-slide-right bubble-animation"
-                style={{ animationDelay: `${index * 0.2}s` }}
+                style={{ animationDelay: `${index * 0.7}s` }}
               >
                 {text}
               </div>
@@ -80,7 +80,7 @@ const Hero = () => {
               <div 
                 key={`bottom-${index}`}
                 className="speech-bubble bg-neutral-800 text-white px-4 py-2 rounded-full text-sm animate-slide-right bubble-animation"
-                style={{ animationDelay: `${(index + 4) * 0.2}s` }}
+                style={{ animationDelay: `${(index + topRowBubbles.length) * 0.7}s` }}
               >
                 {text}
               </div>
