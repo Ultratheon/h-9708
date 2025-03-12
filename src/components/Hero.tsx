@@ -4,6 +4,13 @@ import { useState, useEffect } from "react";
 
 const Hero = () => {
   const words = ["Business", "Restaurant", "Telecom", "Construction", "Retail"];
+  const wordColors = [
+    "from-blue-400 to-purple-500",
+    "from-orange-400 to-pink-500",
+    "from-blue-500 to-cyan-400",
+    "from-yellow-400 to-orange-500", 
+    "from-emerald-400 to-teal-500"
+  ];
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [fade, setFade] = useState(false);
 
@@ -26,7 +33,7 @@ const Hero = () => {
         <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance leading-tight text-white">
           Meet Osiri, your first AI assistant capable of making your company conversational. Customized for{" "}
           <span 
-            className={`inline-block transition-opacity duration-500 ${fade ? 'opacity-0' : 'opacity-100'}`}
+            className={`inline-block transition-opacity duration-500 font-extrabold italic bg-gradient-to-r ${wordColors[currentWordIndex]} bg-clip-text text-transparent ${fade ? 'opacity-0' : 'opacity-100'}`}
           >
             {words[currentWordIndex]}
           </span>
