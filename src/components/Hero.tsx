@@ -1,6 +1,7 @@
 
 import { ArrowRight } from "lucide-react";
 import { useState, useEffect } from "react";
+import ChatBubbles from "./ChatBubbles";
 
 const Hero = () => {
   const words = ["Business", "Restaurants", "Telecom", "Construction", "Retail", "E-commerce", "SaaS"];
@@ -15,31 +16,6 @@ const Hero = () => {
   ];
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [fade, setFade] = useState(false);
-
-  // Speech bubble examples organized by rows
-  const bubbleGroups = [
-    // Row 1
-    [
-      "Tell me how to integrate a BB6630",
-      "Show me the sales month over month",
-      "What countries do my app downloads come from",
-      "Generate the daily report on expenses"
-    ],
-    // Row 2
-    [
-      "Why am I losing orders despite rising traffic",
-      "Which wine is our best seller and why",
-      "What product trends are emerging this quarter",
-      "How are discounts affecting our margins"
-    ],
-    // Row 3
-    [
-      "What's our customer satisfaction score",
-      "Create an ad for our new product launch",
-      "Plan an email campaign for Black Friday",
-      "Analyze the latest customer feedback"
-    ]
-  ];
 
   useEffect(() => {
     const wordInterval = setInterval(() => {
@@ -69,25 +45,7 @@ const Hero = () => {
           Integrate Osiri with your business and turn data into actionable insights through natural conversations.
         </p>
 
-        {/* Continuous flowing speech bubbles */}
-        <div className="mb-10 relative h-[180px] md:h-[160px] overflow-hidden">
-          {bubbleGroups.map((bubbles, rowIndex) => (
-            <div key={`row-${rowIndex}`} className="relative h-[60px] mb-1 overflow-hidden">
-              {bubbles.map((text, bubbleIndex) => (
-                <div 
-                  key={`bubble-${rowIndex}-${bubbleIndex}`}
-                  className="speech-bubble absolute whitespace-nowrap bubble-animation hover:bg-neutral-700 transition-colors cursor-pointer"
-                  style={{ 
-                    animationDelay: `${(bubbleIndex * 4) + (rowIndex * 1)}s`,
-                    animationIterationCount: 'infinite'
-                  }}
-                >
-                  {text}
-                </div>
-              ))}
-            </div>
-          ))}
-        </div>
+        <ChatBubbles />
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <button className="bg-white text-neutral-900 px-6 py-3 rounded-lg hover:bg-neutral-200 transition-colors flex items-center justify-center gap-2">

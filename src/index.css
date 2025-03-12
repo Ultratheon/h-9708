@@ -26,7 +26,7 @@
   }
   
   .speech-bubble {
-    @apply bg-neutral-800/90 text-white px-4 py-2 rounded-full text-sm;
+    @apply bg-neutral-800/90 text-white px-4 py-2 rounded-full text-sm inline-block;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   }
 }
@@ -55,25 +55,32 @@
   animation: slide-right 0.8s ease forwards;
 }
 
-@keyframes bubble-float {
+@keyframes bubble-move-right {
   0% {
-    transform: translateX(-10%);
+    transform: translateX(-100%);
     opacity: 0;
   }
-  5% {
+  10% {
     opacity: 1;
   }
   90% {
     opacity: 1;
   }
   100% {
-    transform: translateX(110%);
+    transform: translateX(100vw);
     opacity: 0;
   }
 }
 
-.bubble-animation {
-  animation: bubble-float 18s linear forwards;
+.bubble-track {
+  @apply relative w-full overflow-hidden;
+  height: 40px;
+}
+
+.bubble-item {
+  position: absolute;
+  animation: bubble-move-right 15s linear infinite;
+  white-space: nowrap;
 }
 
 @keyframes float {
