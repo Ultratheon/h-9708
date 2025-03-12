@@ -66,8 +66,11 @@ const Hero = () => {
             {topRowBubbles.map((text, index) => (
               <div 
                 key={`top-${index}`}
-                className="speech-bubble bg-neutral-800 text-white px-4 py-2 rounded-full text-sm animate-slide-right"
-                style={{ animationDelay: `${index * 0.2}s` }}
+                className="speech-bubble bg-neutral-800 text-white px-4 py-2 rounded-full text-sm animate-slide-right bubble-animation"
+                style={{ 
+                  animationDelay: `${index * 0.2}s, ${(index * 0.2) + 0.8}s`,
+                  animationDuration: '0.8s, 3s'
+                }}
               >
                 {text}
               </div>
@@ -79,8 +82,11 @@ const Hero = () => {
             {bottomRowBubbles.map((text, index) => (
               <div 
                 key={`bottom-${index}`}
-                className="speech-bubble bg-neutral-800 text-white px-4 py-2 rounded-full text-sm animate-slide-right"
-                style={{ animationDelay: `${(index + 4) * 0.2}s` }}
+                className="speech-bubble bg-neutral-800 text-white px-4 py-2 rounded-full text-sm animate-slide-right bubble-animation"
+                style={{ 
+                  animationDelay: `${(index + 4) * 0.2}s, ${(index + 4) * 0.2 + 0.8}s`,
+                  animationDuration: '0.8s, 3s'
+                }}
               >
                 {text}
               </div>
