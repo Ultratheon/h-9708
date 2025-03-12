@@ -1,3 +1,4 @@
+
 import { ArrowRight } from "lucide-react";
 import { useState, useEffect } from "react";
 
@@ -15,17 +16,20 @@ const Hero = () => {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [fade, setFade] = useState(false);
 
-  // Speech bubble texts for the two rows
+  // Speech bubble texts for the three rows
   const topRowBubbles = [
     "Tell me how to integrate a BB6630",
     "Show me the sales month over month",
-    "What country does my app downloads come from",
-    "Which wine is our best seller and why"
+    "What country does my app downloads come from"
+  ];
+  
+  const middleRowBubbles = [
+    "Which wine is our best seller and why",
+    "Generate the daily report on today",
+    "Why am I losing orders despite rising traffic"
   ];
   
   const bottomRowBubbles = [
-    "Generate the daily report on today",
-    "Why am I losing orders despite rising traffic",
     "What product or customer trends are emerging over time",
     "How are discounts and promotions really affecting my margins"
   ];
@@ -61,11 +65,11 @@ const Hero = () => {
         {/* Speech bubbles */}
         <div className="mb-10">
           {/* Top row */}
-          <div className="flex flex-wrap justify-center gap-2 mb-3 overflow-hidden">
+          <div className="flex flex-wrap justify-center gap-2 mb-3">
             {topRowBubbles.map((text, index) => (
               <div 
                 key={`top-${index}`}
-                className="speech-bubble bg-neutral-800 text-white px-4 py-2 rounded-full text-sm animate-slide-right bubble-animation"
+                className="speech-bubble bg-neutral-800 text-white px-4 py-2 rounded-full text-sm animate-slide-right"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
                 {text}
@@ -73,13 +77,26 @@ const Hero = () => {
             ))}
           </div>
           
+          {/* Middle row */}
+          <div className="flex flex-wrap justify-center gap-2 mb-3">
+            {middleRowBubbles.map((text, index) => (
+              <div 
+                key={`middle-${index}`}
+                className="speech-bubble bg-neutral-800 text-white px-4 py-2 rounded-full text-sm animate-slide-right"
+                style={{ animationDelay: `${(index + 3) * 0.2}s` }}
+              >
+                {text}
+              </div>
+            ))}
+          </div>
+          
           {/* Bottom row */}
-          <div className="flex flex-wrap justify-center gap-2 overflow-hidden">
+          <div className="flex flex-wrap justify-center gap-2">
             {bottomRowBubbles.map((text, index) => (
               <div 
                 key={`bottom-${index}`}
-                className="speech-bubble bg-neutral-800 text-white px-4 py-2 rounded-full text-sm animate-slide-right bubble-animation"
-                style={{ animationDelay: `${(index + 4) * 0.2}s` }}
+                className="speech-bubble bg-neutral-800 text-white px-4 py-2 rounded-full text-sm animate-slide-right"
+                style={{ animationDelay: `${(index + 6) * 0.2}s` }}
               >
                 {text}
               </div>
@@ -97,7 +114,7 @@ const Hero = () => {
           </button>
         </div>
       </div>
-      <div className="mt-16 glass-card rounded-xl p-4 max-w-4xl mx-auto animate-float">
+      <div className="mt-16 glass-card rounded-xl p-4 max-w-4xl mx-auto">
         <img 
           src="https://images.unsplash.com/photo-1460925895917-afdab827c52f"
           alt="Dashboard Preview"
