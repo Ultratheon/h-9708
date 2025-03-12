@@ -21,29 +21,31 @@ const ChatBubbles = () => {
         Ask Industry-Specific Questions
       </h3>
       
-      <div className="flex flex-col items-center gap-4">
+      <div className="questions-container">
         {/* First row of questions */}
-        <div className="flex flex-wrap justify-center gap-4">
+        <div className="question-row">
           {row1Questions.map((question, index) => (
             <div 
               key={`row1-${index}`} 
-              className="bg-white text-neutral-800 px-4 py-2 rounded-lg text-sm inline-flex items-center gap-2 hover:bg-white/90 transition-colors cursor-pointer"
+              className="question-bubble animate-float" 
+              style={{ animationDelay: `${index * 0.2}s` }}
             >
               {question}
-              <ArrowRight className="text-blue-500 w-4 h-4" />
+              <ArrowRight className="arrow w-4 h-4" />
             </div>
           ))}
         </div>
         
         {/* Second row of questions */}
-        <div className="flex flex-wrap justify-center gap-4">
+        <div className="question-row">
           {row2Questions.map((question, index) => (
             <div 
               key={`row2-${index}`} 
-              className="bg-white text-neutral-800 px-4 py-2 rounded-lg text-sm inline-flex items-center gap-2 hover:bg-white/90 transition-colors cursor-pointer"
+              className="question-bubble animate-float" 
+              style={{ animationDelay: `${(index + 3) * 0.2}s` }}
             >
               {question}
-              <ArrowRight className="text-blue-500 w-4 h-4" />
+              <ArrowRight className="arrow w-4 h-4" />
             </div>
           ))}
         </div>
