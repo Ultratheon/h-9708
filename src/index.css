@@ -29,3 +29,12 @@
 .text-balance {
   text-wrap: balance;
 }
+
+@keyframes word-fade {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.animate-word {
+  animation: word-fade 3s infinite;
+}
