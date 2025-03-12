@@ -3,13 +3,15 @@ import { ArrowRight } from "lucide-react";
 import { useState, useEffect } from "react";
 
 const Hero = () => {
-  const words = ["Business", "Restaurant", "Telecom", "Construction", "Retail"];
+  const words = ["Business", "Restaurants", "Telecom", "Construction", "Retail", "E-commerce", "SaaS"];
   const wordColors = [
     "from-blue-400 to-purple-500",
     "from-orange-400 to-pink-500",
     "from-blue-500 to-cyan-400",
     "from-yellow-400 to-orange-500", 
-    "from-emerald-400 to-teal-500"
+    "from-emerald-400 to-teal-500",
+    "from-purple-400 to-pink-500",
+    "from-cyan-400 to-blue-500"
   ];
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [fade, setFade] = useState(false);
