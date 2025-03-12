@@ -1,4 +1,3 @@
-
 import { ArrowRight } from "lucide-react";
 import { useState, useEffect } from "react";
 
@@ -41,7 +40,7 @@ const Hero = () => {
           </span>
         </h1>
         <p className="text-lg md:text-xl text-neutral-400 mb-8 max-w-2xl mx-auto">
-          Streamline your payment processes and focus on what matters most - growing your business. Simple, secure, and seamless.
+          Simply integrate Osiri with your business operations to access a comprehensive analytics dashboard. Engage in natural conversations with your data and receive detailed insights complemented by visual graphs and charts.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <button className="bg-white text-neutral-900 px-6 py-3 rounded-lg hover:bg-neutral-200 transition-colors flex items-center justify-center gap-2">
