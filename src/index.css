@@ -1,23 +1,24 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 20 14.3% 4.1%;
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
     --radius: 0.5rem;
   }
 
   body {
-    @apply bg-neutral-50 text-primary antialiased;
+    @apply bg-neutral-900 text-white antialiased;
     font-feature-settings: "ss01" on, "ss02" on, "cv01" on, "cv03" on;
   }
 }
 
 @layer components {
   .glass-card {
-    @apply bg-white/70 backdrop-blur-lg border border-white/20 shadow-lg;
+    @apply bg-neutral-800/50 backdrop-blur-lg border border-neutral-700/20 shadow-lg;
   }
   
   .container-padding {

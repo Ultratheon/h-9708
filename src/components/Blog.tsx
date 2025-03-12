@@ -21,9 +21,9 @@ const blogPosts = [
 
 const Blog = () => {
   return (
-    <section className="py-16 container-padding">
+    <section className="py-16 container-padding bg-neutral-900">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-white">
           Learn From The Blog
         </h2>
         <div className="grid md:grid-cols-3 gap-8 mt-12">
@@ -37,12 +37,12 @@ const Blog = () => {
                 />
               </div>
               <div className="p-6">
-                <div className="flex items-center gap-2 text-sm text-neutral-500 mb-2">
+                <div className="flex items-center gap-2 text-sm text-neutral-400 mb-2">
                   <span>{post.date}</span>
                   <span>•</span>
                   <span>{post.readTime}</span>
                 </div>
-                <h3 className="font-semibold group-hover:text-accent transition-colors">
+                <h3 className="font-semibold text-white group-hover:text-accent transition-colors">
                   {post.title}
                 </h3>
               </div>
