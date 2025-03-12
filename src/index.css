@@ -26,8 +26,8 @@
   }
   
   .speech-bubble {
-    @apply bg-neutral-800/90 text-white px-4 py-2 rounded-full text-sm inline-block;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    @apply bg-white text-neutral-800 px-4 py-2 rounded-lg text-sm inline-flex items-center gap-2;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   }
 }
 
@@ -55,32 +55,21 @@
   animation: slide-right 0.8s ease forwards;
 }
 
-@keyframes bubble-move-right {
-  0% {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  10% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(100vw);
-    opacity: 0;
-  }
+.questions-container {
+  @apply flex flex-col gap-3 my-8 max-w-3xl mx-auto;
 }
 
-.bubble-track {
-  @apply relative w-full overflow-hidden;
-  height: 40px;
+.question-row {
+  @apply flex flex-wrap justify-center gap-3;
 }
 
-.bubble-item {
-  position: absolute;
-  animation: bubble-move-right 15s linear infinite;
-  white-space: nowrap;
+.question-bubble {
+  @apply bg-white/95 text-neutral-800 px-4 py-2 rounded-lg text-sm inline-flex items-center gap-1.5 hover:bg-white transition-colors duration-200 cursor-pointer;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.question-bubble .arrow {
+  @apply text-blue-500;
 }
 
 @keyframes float {
@@ -95,3 +84,4 @@
 .animate-float {
   animation: float 6s ease-in-out infinite;
 }
+

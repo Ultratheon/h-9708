@@ -41,18 +41,18 @@ const Hero = () => {
             {words[currentWordIndex]}
           </span>
         </h1>
-        <p className="text-lg md:text-xl text-neutral-400 mb-10 max-w-xl mx-auto">
-          Integrate Osiri with your business and turn data into actionable insights through natural conversations.
+        <p className="text-lg md:text-xl text-neutral-400 mb-6 max-w-2xl mx-auto">
+          Osiri AI leverages proprietary industry datasets beyond what's available in ChatGPT or standard AI applications. Simply integrate Osiri with your business operations to access a comprehensive analytics dashboard.
         </p>
 
         <ChatBubbles />
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <button className="bg-white text-neutral-900 px-6 py-3 rounded-lg hover:bg-neutral-200 transition-colors flex items-center justify-center gap-2">
-            Get Started
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+          <button className="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition-colors flex items-center justify-center gap-2">
+            Access Platform
             <ArrowRight className="w-4 h-4" />
           </button>
-          <button className="bg-neutral-800 text-white px-6 py-3 rounded-lg hover:bg-neutral-700 transition-colors">
+          <button className="bg-white/10 text-white border border-white/20 px-6 py-3 rounded-lg hover:bg-white/20 transition-colors">
             Learn More
           </button>
         </div>
