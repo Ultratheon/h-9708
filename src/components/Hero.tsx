@@ -1,3 +1,4 @@
+
 import { ArrowRight } from "lucide-react";
 import { useState, useEffect } from "react";
 
@@ -15,23 +16,29 @@ const Hero = () => {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [fade, setFade] = useState(false);
 
-  // Speech bubble texts for the three rows
-  const topRowBubbles = [
-    "Tell me how to integrate a BB6630",
-    "Show me the sales month over month",
-    "What country does my app downloads come from"
-  ];
-  
-  const middleRowBubbles = [
-    "Generate the daily report on today",
-    "Why am I losing orders despite rising traffic",
-    "Which wine is our best seller and why"
-  ];
-  
-  const bottomRowBubbles = [
-    "What product trends are emerging",
-    "How are discounts affecting margins",
-    "What's our customer satisfaction score"
+  // Speech bubble examples organized by rows
+  const bubbleGroups = [
+    // Row 1
+    [
+      "Tell me how to integrate a BB6630",
+      "Show me the sales month over month",
+      "What countries do my app downloads come from",
+      "Generate the daily report on expenses"
+    ],
+    // Row 2
+    [
+      "Why am I losing orders despite rising traffic",
+      "Which wine is our best seller and why",
+      "What product trends are emerging this quarter",
+      "How are discounts affecting our margins"
+    ],
+    // Row 3
+    [
+      "What's our customer satisfaction score",
+      "Create an ad for our new product launch",
+      "Plan an email campaign for Black Friday",
+      "Analyze the latest customer feedback"
+    ]
   ];
 
   useEffect(() => {
@@ -62,46 +69,24 @@ const Hero = () => {
           Integrate Osiri with your business and turn data into actionable insights through natural conversations.
         </p>
 
-        {/* Speech bubbles */}
-        <div className="mb-10 relative overflow-hidden">
-          {/* Top row */}
-          <div className="flex gap-4 mb-3">
-            {topRowBubbles.map((text, index) => (
-              <div 
-                key={`top-${index}`}
-                className="speech-bubble bg-neutral-800 text-white px-4 py-2 rounded-full text-sm bubble-animation whitespace-nowrap"
-                style={{ animationDelay: `${index * 2}s` }}
-              >
-                {text}
-              </div>
-            ))}
-          </div>
-          
-          {/* Middle row */}
-          <div className="flex gap-4 mb-3">
-            {middleRowBubbles.map((text, index) => (
-              <div 
-                key={`middle-${index}`}
-                className="speech-bubble bg-neutral-800 text-white px-4 py-2 rounded-full text-sm bubble-animation whitespace-nowrap"
-                style={{ animationDelay: `${(index * 2) + 1}s` }}
-              >
-                {text}
-              </div>
-            ))}
-          </div>
-          
-          {/* Bottom row */}
-          <div className="flex gap-4">
-            {bottomRowBubbles.map((text, index) => (
-              <div 
-                key={`bottom-${index}`}
-                className="speech-bubble bg-neutral-800 text-white px-4 py-2 rounded-full text-sm bubble-animation whitespace-nowrap"
-                style={{ animationDelay: `${(index * 2) + 0.5}s` }}
-              >
-                {text}
-              </div>
-            ))}
-          </div>
+        {/* Continuous flowing speech bubbles */}
+        <div className="mb-10 relative h-[180px] md:h-[160px] overflow-hidden">
+          {bubbleGroups.map((bubbles, rowIndex) => (
+            <div key={`row-${rowIndex}`} className="relative h-[60px] mb-1 overflow-hidden">
+              {bubbles.map((text, bubbleIndex) => (
+                <div 
+                  key={`bubble-${rowIndex}-${bubbleIndex}`}
+                  className="speech-bubble absolute whitespace-nowrap bubble-animation hover:bg-neutral-700 transition-colors cursor-pointer"
+                  style={{ 
+                    animationDelay: `${(bubbleIndex * 4) + (rowIndex * 1)}s`,
+                    animationIterationCount: 'infinite'
+                  }}
+                >
+                  {text}
+                </div>
+              ))}
+            </div>
+          ))}
         </div>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
