@@ -1,7 +1,5 @@
-
 import { ArrowRight } from "lucide-react";
 import { useState, useEffect } from "react";
-import ChatBubbles from "./ChatBubbles";
 
 const Hero = () => {
   const words = ["Business", "Restaurants", "Telecom", "Construction", "Retail", "E-commerce", "SaaS"];
@@ -16,6 +14,21 @@ const Hero = () => {
   ];
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [fade, setFade] = useState(false);
+
+  // Speech bubble texts for the two rows
+  const topRowBubbles = [
+    "Tell me how to integrate a BB6630",
+    "Show me the sales month over month",
+    "What country does my app downloads come from",
+    "Which wine is our best seller and why"
+  ];
+  
+  const bottomRowBubbles = [
+    "Generate the daily report on today",
+    "Why am I losing orders despite rising traffic",
+    "What product or customer trends are emerging over time",
+    "How are discounts and promotions really affecting my margins"
+  ];
 
   useEffect(() => {
     const wordInterval = setInterval(() => {
@@ -41,18 +54,45 @@ const Hero = () => {
             {words[currentWordIndex]}
           </span>
         </h1>
-        <p className="text-lg md:text-xl text-neutral-400 mb-6 max-w-2xl mx-auto">
-          Osiri AI leverages proprietary industry datasets beyond what's available in ChatGPT or standard AI applications. Simply integrate Osiri with your business operations to access a comprehensive analytics dashboard.
+        <p className="text-lg md:text-xl text-neutral-400 mb-10 max-w-xl mx-auto">
+          Integrate Osiri with your business and turn data into actionable insights through natural conversations.
         </p>
 
-        <ChatBubbles />
+        {/* Speech bubbles */}
+        <div className="mb-10">
+          {/* Top row */}
+          <div className="flex flex-wrap justify-center gap-2 mb-3 overflow-hidden">
+            {topRowBubbles.map((text, index) => (
+              <div 
+                key={`top-${index}`}
+                className="speech-bubble bg-neutral-800 text-white px-4 py-2 rounded-full text-sm animate-slide-right bubble-animation"
+                style={{ animationDelay: `${index * 0.2}s` }}
+              >
+                {text}
+              </div>
+            ))}
+          </div>
+          
+          {/* Bottom row */}
+          <div className="flex flex-wrap justify-center gap-2 overflow-hidden">
+            {bottomRowBubbles.map((text, index) => (
+              <div 
+                key={`bottom-${index}`}
+                className="speech-bubble bg-neutral-800 text-white px-4 py-2 rounded-full text-sm animate-slide-right bubble-animation"
+                style={{ animationDelay: `${(index + 4) * 0.2}s` }}
+              >
+                {text}
+              </div>
+            ))}
+          </div>
+        </div>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-          <button className="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition-colors flex items-center justify-center gap-2">
-            Access Platform
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <button className="bg-white text-neutral-900 px-6 py-3 rounded-lg hover:bg-neutral-200 transition-colors flex items-center justify-center gap-2">
+            Get Started
             <ArrowRight className="w-4 h-4" />
           </button>
-          <button className="bg-white/10 text-white border border-white/20 px-6 py-3 rounded-lg hover:bg-white/20 transition-colors">
+          <button className="bg-neutral-800 text-white px-6 py-3 rounded-lg hover:bg-neutral-700 transition-colors">
             Learn More
           </button>
         </div>
