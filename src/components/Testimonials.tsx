@@ -53,7 +53,7 @@ const Testimonials = () => {
         <div className="w-full md:w-1/2">
           <div className="relative">
             <img 
-              src="/lovable-uploads/39884eb2-a9e7-480f-b23f-164550d5a316.png" 
+              src="/lovable-uploads/e912a727-0b13-4d6e-98e5-82283efabc22.png" 
               alt="Osiri AI Dashboard" 
               className="w-full rounded-lg"
             />
