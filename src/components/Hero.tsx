@@ -63,9 +63,9 @@ const Hero = () => {
         </p>
 
         {/* Speech bubbles */}
-        <div className="mb-10 overflow-hidden">
+        <div className="mb-10 overflow-hidden relative">
           {/* Top row */}
-          <div className="flex flex-wrap justify-center gap-2 mb-3 animate-slide-right" style={{ animationDelay: '0.2s' }}>
+          <div className="flex flex-wrap justify-center gap-2 mb-3 animate-continuous-slide" style={{ animationDelay: '0s' }}>
             {topRowBubbles.map((text, index) => (
               <div 
                 key={`top-${index}`}
@@ -77,7 +77,7 @@ const Hero = () => {
           </div>
           
           {/* Middle row */}
-          <div className="flex flex-wrap justify-center gap-2 mb-3 animate-slide-right" style={{ animationDelay: '0.6s' }}>
+          <div className="flex flex-wrap justify-center gap-2 mb-3 animate-continuous-slide" style={{ animationDelay: '-5s' }}>
             {middleRowBubbles.map((text, index) => (
               <div 
                 key={`middle-${index}`}
@@ -89,7 +89,7 @@ const Hero = () => {
           </div>
           
           {/* Bottom row */}
-          <div className="flex flex-wrap justify-center gap-2 animate-slide-right" style={{ animationDelay: '1s' }}>
+          <div className="flex flex-wrap justify-center gap-2 animate-continuous-slide" style={{ animationDelay: '-10s' }}>
             {bottomRowBubbles.map((text, index) => (
               <div 
                 key={`bottom-${index}`}

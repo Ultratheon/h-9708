@@ -55,8 +55,21 @@
   }
 }
 
+@keyframes continuous-slide {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
 .animate-slide-right {
   animation: slide-right 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.animate-continuous-slide {
+  animation: continuous-slide 15s linear infinite;
 }
 
 /* Removed bubble-float animation */
