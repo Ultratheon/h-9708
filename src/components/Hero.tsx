@@ -107,7 +107,7 @@ const Hero = () => {
       </div>
       <div className="mt-16 glass-card rounded-xl p-4 max-w-4xl mx-auto">
         <img 
-          src="/public/lovable-uploads/95d109a3-40d5-4a88-8d97-d37381be91ed.png" 
+          src="/public/lovable-uploads/0b79baec-471c-42d9-a058-516bfc58fd6d.png" 
           alt="Osiri Dashboard" 
           className="rounded-lg w-full" 
         />
