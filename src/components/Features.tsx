@@ -1,26 +1,26 @@
 
-import { Check, CreditCard, BarChart, Globe, Clock } from "lucide-react";
+import { MessageSquare, Brain, Database, Zap } from "lucide-react";
 
 const features = [
   {
-    title: "Simple Checkout",
-    description: "Streamlined checkout process optimized for conversion and user experience.",
-    icon: CreditCard,
+    title: "Natural Language Interface",
+    description: "Interact with your business data through simple conversations rather than complex dashboards.",
+    icon: MessageSquare,
   },
   {
-    title: "Recurring Billing",
-    description: "Automated billing system for subscriptions and recurring payments.",
-    icon: Clock,
+    title: "AI-Powered Insights",
+    description: "Get intelligent analysis and recommendations tailored to your specific business needs and data.",
+    icon: Brain,
   },
   {
-    title: "Global Payments",
-    description: "Accept payments from customers anywhere in the world.",
-    icon: Globe,
+    title: "Data Integration",
+    description: "Connect with your existing systems and databases to provide comprehensive business intelligence.",
+    icon: Database,
   },
   {
-    title: "Detailed Analytics",
-    description: "Get insights into your business with comprehensive reporting.",
-    icon: BarChart,
+    title: "20× Faster Than Traditional Methods",
+    description: "Use your native language to describe what you need instead of writing code or complex queries.",
+    icon: Zap,
   },
 ];
 
@@ -29,10 +29,10 @@ const Features = () => {
     <section id="features" className="py-16 container-padding bg-neutral-900">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-white">
-          Everything You Need to Run & Grow Your Business
+          Turn Your Business Data Into Conversations
         </h2>
         <p className="text-neutral-400 text-center mb-12 max-w-2xl mx-auto">
-          All the tools and features you need to accept payments, manage subscriptions, and scale your business globally.
+          Osiri transforms how you interact with your business information, making complex data accessible through natural language conversations.
         </p>
         <div className="grid md:grid-cols-2 gap-8">
           {features.map((feature, index) => (
