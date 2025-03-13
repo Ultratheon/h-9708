@@ -57,11 +57,13 @@ const Hero = () => {
           Meet Osiri, your first AI assistant capable of making your company conversational.
           <div className="flex items-center justify-center">
             <span className="whitespace-nowrap">.Customized for</span>
-            <span 
-              className={`inline-block transition-opacity duration-500 font-extrabold italic bg-gradient-to-r ${wordColors[currentWordIndex]} bg-clip-text text-transparent ml-2 min-w-[120px] text-center ${fade ? 'opacity-0' : 'opacity-100'}`}
-            >
-              {words[currentWordIndex]}
-            </span>
+            <div className="inline-block ml-2 min-w-[120px] text-center">
+              <span 
+                className={`inline-block transition-opacity duration-500 font-extrabold italic bg-gradient-to-r ${wordColors[currentWordIndex]} bg-clip-text text-transparent ${fade ? 'opacity-0' : 'opacity-100'}`}
+              >
+                {words[currentWordIndex]}
+              </span>
+            </div>
           </div>
         </h1>
         <p className="text-lg md:text-xl text-neutral-400 mb-4 max-w-xl mx-auto">
