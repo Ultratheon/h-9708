@@ -64,36 +64,36 @@ const Hero = () => {
 
         {/* Speech bubbles */}
         <div className="mb-10 overflow-hidden relative">
-          {/* Top row */}
-          <div className="flex flex-wrap justify-center gap-2 mb-3 animate-continuous-slide" style={{ animationDelay: '0s' }}>
+          {/* Top row - as a single unit */}
+          <div className="flex whitespace-nowrap animate-unified-slide mb-3">
             {topRowBubbles.map((text, index) => (
               <div 
                 key={`top-${index}`}
-                className="speech-bubble bg-neutral-800 text-white px-4 py-2 rounded-full text-sm"
+                className="speech-bubble bg-neutral-800 text-white px-4 py-2 rounded-full text-sm mx-2 inline-block"
               >
                 {text}
               </div>
             ))}
           </div>
           
-          {/* Middle row */}
-          <div className="flex flex-wrap justify-center gap-2 mb-3 animate-continuous-slide" style={{ animationDelay: '-5s' }}>
+          {/* Middle row - as a single unit */}
+          <div className="flex whitespace-nowrap animate-unified-slide mb-3" style={{ animationDelay: '-10s' }}>
             {middleRowBubbles.map((text, index) => (
               <div 
                 key={`middle-${index}`}
-                className="speech-bubble bg-neutral-800 text-white px-4 py-2 rounded-full text-sm"
+                className="speech-bubble bg-neutral-800 text-white px-4 py-2 rounded-full text-sm mx-2 inline-block"
               >
                 {text}
               </div>
             ))}
           </div>
           
-          {/* Bottom row */}
-          <div className="flex flex-wrap justify-center gap-2 animate-continuous-slide" style={{ animationDelay: '-10s' }}>
+          {/* Bottom row - as a single unit */}
+          <div className="flex whitespace-nowrap animate-unified-slide" style={{ animationDelay: '-20s' }}>
             {bottomRowBubbles.map((text, index) => (
               <div 
                 key={`bottom-${index}`}
-                className="speech-bubble bg-neutral-800 text-white px-4 py-2 rounded-full text-sm"
+                className="speech-bubble bg-neutral-800 text-white px-4 py-2 rounded-full text-sm mx-2 inline-block"
               >
                 {text}
               </div>
