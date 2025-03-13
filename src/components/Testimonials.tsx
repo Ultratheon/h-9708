@@ -22,18 +22,45 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section id="testimonials" className="py-16 container-padding bg-neutral-900">
-      <div className="max-w-6xl mx-auto mb-16">
-        <div className="flex justify-center">
-          <img 
-            src="/lovable-uploads/167b0ab8-a338-430d-8da6-8efa3e4af413.png" 
-            alt="Osiri AI Dashboard" 
-            className="w-full max-w-4xl rounded-lg shadow-lg"
-          />
+    <section id="testimonials" className="py-16 container-padding bg-[#050A16]">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-12">
+        {/* Left Content */}
+        <div className="w-full md:w-1/2 text-left">
+          <div className="max-w-xl">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white leading-tight">
+              Autonomous Agent<br />
+              for analytics
+            </h2>
+            
+            <div className="w-32 h-1 bg-blue-500 my-6"></div>
+            
+            <p className="text-lg text-gray-300 mb-8">
+              Osiri is your dedicated AI Analyst, answering
+              questions and providing business-ready insights for
+              anyone, anywhere — while delivering enterprise-grade
+              trust. Enter the new era of analytics with agentic AI.
+            </p>
+            
+            <button className="px-6 py-3 bg-transparent hover:bg-blue-600 text-white border border-white hover:border-blue-600 rounded-full transition duration-300 ease-in-out">
+              Meet Osiri
+            </button>
+          </div>
+        </div>
+        
+        {/* Right Image */}
+        <div className="w-full md:w-1/2">
+          <div className="relative">
+            <img 
+              src="/lovable-uploads/ad3ca630-2024-409b-b924-2c18da51bddd.png" 
+              alt="Osiri AI Dashboard" 
+              className="w-full rounded-lg"
+            />
+          </div>
         </div>
       </div>
       
-      <div className="max-w-4xl mx-auto">
+      {/* Testimonials Section (Hidden for now as per the new design) */}
+      <div className="hidden max-w-4xl mx-auto mt-24">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-white">
           See What Our Customers Are Saying
         </h2>
