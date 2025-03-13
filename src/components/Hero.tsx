@@ -58,14 +58,7 @@ const Hero = () => {
           <div className="flex items-center justify-center">
             <span className="whitespace-nowrap">.Customized for</span>
             <span 
-              className="inline-block transition-opacity duration-500 font-extrabold italic bg-gradient-to-r ml-2 min-w-[120px] text-center"
-              style={{
-                backgroundImage: `linear-gradient(to right, ${fade ? 'transparent, transparent' : `var(--${wordColors[currentWordIndex].replace('from-', 'from-color-').replace('to-', 'to-color-')})`})`,
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text',
-                opacity: fade ? 0 : 1
-              }}
+              className={`inline-block transition-opacity duration-500 font-extrabold italic bg-gradient-to-r ${wordColors[currentWordIndex]} bg-clip-text text-transparent ml-2 min-w-[120px] text-center ${fade ? 'opacity-0' : 'opacity-100'}`}
             >
               {words[currentWordIndex]}
             </span>
