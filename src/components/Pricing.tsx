@@ -11,11 +11,11 @@ const Pricing = () => {
         </p>
         
         <div className="grid md:grid-cols-3 gap-6">
-          {/* First Card - $99 */}
+          {/* First Card - $20 (was $99) */}
           <div className="glass-card rounded-xl p-6 flex flex-col h-full border-t-2 border-t-blue-500 hover:translate-y-[-8px] transition-transform duration-300">
             <h3 className="text-xl font-bold text-white mb-2">Starter</h3>
             <div className="mb-4">
-              <span className="text-3xl font-bold text-white">$99</span>
+              <span className="text-3xl font-bold text-white">$20</span>
               <span className="text-neutral-400">/month</span>
             </div>
             <p className="text-neutral-400 mb-6">Perfect for small businesses getting started with AI.</p>
@@ -44,14 +44,14 @@ const Pricing = () => {
             </button>
           </div>
           
-          {/* Second Card - $199 */}
+          {/* Second Card - $99 (was $199) */}
           <div className="glass-card rounded-xl p-6 flex flex-col h-full relative border-t-2 border-t-purple-500 scale-105 z-10 hover:translate-y-[-8px] transition-transform duration-300">
             <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-purple-500 text-white text-xs font-bold py-1 px-3 rounded-full">
               POPULAR
             </div>
             <h3 className="text-xl font-bold text-white mb-2">Business</h3>
             <div className="mb-4">
-              <span className="text-3xl font-bold text-white">$199</span>
+              <span className="text-3xl font-bold text-white">$99</span>
               <span className="text-neutral-400">/month</span>
             </div>
             <p className="text-neutral-400 mb-6">Ideal for growing businesses needing more capabilities.</p>
