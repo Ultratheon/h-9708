@@ -63,11 +63,11 @@ const Hero = () => {
             </span>
           </span>
         </h1>
-        <p className="text-lg md:text-xl text-neutral-400 mb-10 max-w-xl mx-auto">
+        <p className="text-lg md:text-xl text-neutral-400 mb-4 max-w-xl mx-auto">
           Integrate Osiri with your business and turn data into actionable insights through natural conversations.
         </p>
 
-        {/* Speech bubbles */}
+        {/* Speech bubbles - positioned closer to the subtitle text */}
         <div className="mb-10 overflow-hidden relative">
           {/* Top row - with duplicated content for seamless loop */}
           <div className="flex whitespace-nowrap animate-unified-slide mb-3 w-fit">
