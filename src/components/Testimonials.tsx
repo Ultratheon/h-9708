@@ -28,21 +28,23 @@ const Testimonials = () => {
         <div className="w-full md:w-1/2 text-left">
           <div className="max-w-xl">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white leading-tight">
-              Autonomous Agent<br />
-              for analytics
+              Intelligent AI<br />
+              for your business<br />
+              analytics
             </h2>
             
             <div className="w-32 h-1 bg-blue-500 my-6"></div>
             
             <p className="text-lg text-gray-300 mb-8">
-              Osiri is your dedicated AI Analyst, answering
-              questions and providing business-ready insights for
-              anyone, anywhere — while delivering enterprise-grade
-              trust. Enter the new era of analytics with agentic AI.
+              Osiri AI transforms your business data into
+              actionable insights through natural conversation.
+              Connect your data sources and ask questions
+              in plain language — get powerful visualizations
+              and insights instantly.
             </p>
             
             <button className="px-6 py-3 bg-transparent hover:bg-blue-600 text-white border border-white hover:border-blue-600 rounded-full transition duration-300 ease-in-out">
-              Meet Osiri
+              Experience Osiri
             </button>
           </div>
         </div>
@@ -51,7 +53,7 @@ const Testimonials = () => {
         <div className="w-full md:w-1/2">
           <div className="relative">
             <img 
-              src="/lovable-uploads/ad3ca630-2024-409b-b924-2c18da51bddd.png" 
+              src="/lovable-uploads/39884eb2-a9e7-480f-b23f-164550d5a316.png" 
               alt="Osiri AI Dashboard" 
               className="w-full rounded-lg"
             />
