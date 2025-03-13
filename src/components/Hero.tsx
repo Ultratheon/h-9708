@@ -54,15 +54,22 @@ const Hero = () => {
     <section className="pt-32 pb-16 container-padding">
       <div className="max-w-4xl mx-auto text-center">
         <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance leading-tight text-white">
-          Meet Osiri, your first AI assistant capable of making your company conversational. Customized for{" "}
-          <span className="inline-flex whitespace-nowrap">
+          Meet Osiri, your first AI assistant capable of making your company conversational.
+          <div className="flex items-center justify-center">
+            <span className="whitespace-nowrap">.Customized for</span>
             <span 
-              className={`inline-block transition-opacity duration-500 font-extrabold italic bg-gradient-to-r ${wordColors[currentWordIndex]} bg-clip-text text-transparent ${fade ? 'opacity-0' : 'opacity-100'}`}
-              style={{ minWidth: "150px" }}
+              className="inline-block transition-opacity duration-500 font-extrabold italic bg-gradient-to-r ml-2 min-w-[120px] text-center"
+              style={{
+                backgroundImage: `linear-gradient(to right, ${fade ? 'transparent, transparent' : `var(--${wordColors[currentWordIndex].replace('from-', 'from-color-').replace('to-', 'to-color-')})`})`,
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+                opacity: fade ? 0 : 1
+              }}
             >
               {words[currentWordIndex]}
             </span>
-          </span>
+          </div>
         </h1>
         <p className="text-lg md:text-xl text-neutral-400 mb-4 max-w-xl mx-auto">
           Integrate Osiri with your business and turn data into actionable insights through natural conversations.

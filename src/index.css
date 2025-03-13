@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,6 +8,22 @@
     --background: 0 0% 0%;
     --foreground: 0 0% 100%;
     --radius: 0.5rem;
+    
+    /* Gradient color variables */
+    --from-color-blue-400: #60a5fa;
+    --to-color-purple-500: #a855f7;
+    --from-color-orange-400: #fb923c;
+    --to-color-pink-500: #ec4899;
+    --from-color-blue-500: #3b82f6;
+    --to-color-cyan-400: #22d3ee;
+    --from-color-yellow-400: #facc15;
+    --to-color-orange-500: #f97316;
+    --from-color-emerald-400: #34d399;
+    --to-color-teal-500: #14b8a6;
+    --from-color-purple-400: #c084fc;
+    --to-color-pink-500: #ec4899;
+    --from-color-cyan-400: #22d3ee;
+    --to-color-blue-500: #3b82f6;
   }
 
   body {
