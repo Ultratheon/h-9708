@@ -47,6 +47,9 @@ const Hero = () => {
     return () => clearInterval(wordInterval);
   }, []);
 
+  // Helper function to duplicate arrays for seamless sliding
+  const duplicateForScroll = (array) => [...array, ...array];
+
   return (
     <section className="pt-32 pb-16 container-padding">
       <div className="max-w-4xl mx-auto text-center">
@@ -64,9 +67,9 @@ const Hero = () => {
 
         {/* Speech bubbles */}
         <div className="mb-10 overflow-hidden relative">
-          {/* Top row - as a single unit */}
-          <div className="flex whitespace-nowrap animate-unified-slide mb-3">
-            {topRowBubbles.map((text, index) => (
+          {/* Top row - with duplicated content for seamless loop */}
+          <div className="flex whitespace-nowrap animate-unified-slide mb-3 w-fit">
+            {duplicateForScroll(topRowBubbles).map((text, index) => (
               <div 
                 key={`top-${index}`}
                 className="speech-bubble bg-neutral-800 text-white px-4 py-2 rounded-full text-sm mx-2 inline-block"
@@ -76,9 +79,9 @@ const Hero = () => {
             ))}
           </div>
           
-          {/* Middle row - as a single unit */}
-          <div className="flex whitespace-nowrap animate-unified-slide mb-3" style={{ animationDelay: '-10s' }}>
-            {middleRowBubbles.map((text, index) => (
+          {/* Middle row - with duplicated content for seamless loop */}
+          <div className="flex whitespace-nowrap animate-unified-slide mb-3 w-fit" style={{ animationDelay: '-10s' }}>
+            {duplicateForScroll(middleRowBubbles).map((text, index) => (
               <div 
                 key={`middle-${index}`}
                 className="speech-bubble bg-neutral-800 text-white px-4 py-2 rounded-full text-sm mx-2 inline-block"
@@ -88,9 +91,9 @@ const Hero = () => {
             ))}
           </div>
           
-          {/* Bottom row - as a single unit */}
-          <div className="flex whitespace-nowrap animate-unified-slide" style={{ animationDelay: '-20s' }}>
-            {bottomRowBubbles.map((text, index) => (
+          {/* Bottom row - with duplicated content for seamless loop */}
+          <div className="flex whitespace-nowrap animate-unified-slide w-fit" style={{ animationDelay: '-20s' }}>
+            {duplicateForScroll(bottomRowBubbles).map((text, index) => (
               <div 
                 key={`bottom-${index}`}
                 className="speech-bubble bg-neutral-800 text-white px-4 py-2 rounded-full text-sm mx-2 inline-block"
