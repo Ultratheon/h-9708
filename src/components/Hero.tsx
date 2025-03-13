@@ -55,10 +55,12 @@ const Hero = () => {
       <div className="max-w-4xl mx-auto text-center">
         <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance leading-tight text-white">
           Meet Osiri, your first AI assistant capable of making your company conversational. Customized for{" "}
-          <span 
-            className={`inline-block transition-opacity duration-500 font-extrabold italic bg-gradient-to-r ${wordColors[currentWordIndex]} bg-clip-text text-transparent ${fade ? 'opacity-0' : 'opacity-100'}`}
-          >
-            {words[currentWordIndex]}
+          <span className="relative inline-block" style={{ minWidth: "150px" }}>
+            <span 
+              className={`absolute left-0 transition-opacity duration-500 font-extrabold italic bg-gradient-to-r ${wordColors[currentWordIndex]} bg-clip-text text-transparent ${fade ? 'opacity-0' : 'opacity-100'}`}
+            >
+              {words[currentWordIndex]}
+            </span>
           </span>
         </h1>
         <p className="text-lg md:text-xl text-neutral-400 mb-10 max-w-xl mx-auto">
