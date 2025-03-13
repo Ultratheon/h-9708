@@ -63,14 +63,14 @@ const Hero = () => {
         </p>
 
         {/* Speech bubbles */}
-        <div className="mb-10">
+        <div className="mb-10 overflow-hidden">
           {/* Top row */}
           <div className="flex flex-wrap justify-center gap-2 mb-3">
             {topRowBubbles.map((text, index) => (
               <div 
                 key={`top-${index}`}
                 className="speech-bubble bg-neutral-800 text-white px-4 py-2 rounded-full text-sm animate-slide-right"
-                style={{ animationDelay: `${index * 0.2}s` }}
+                style={{ animationDelay: `${index * 0.3}s` }}
               >
                 {text}
               </div>
@@ -83,7 +83,7 @@ const Hero = () => {
               <div 
                 key={`middle-${index}`}
                 className="speech-bubble bg-neutral-800 text-white px-4 py-2 rounded-full text-sm animate-slide-right"
-                style={{ animationDelay: `${(index + 3) * 0.2}s` }}
+                style={{ animationDelay: `${(index + 3) * 0.3}s` }}
               >
                 {text}
               </div>
@@ -96,7 +96,7 @@ const Hero = () => {
               <div 
                 key={`bottom-${index}`}
                 className="speech-bubble bg-neutral-800 text-white px-4 py-2 rounded-full text-sm animate-slide-right"
-                style={{ animationDelay: `${(index + 6) * 0.2}s` }}
+                style={{ animationDelay: `${(index + 6) * 0.3}s` }}
               >
                 {text}
               </div>
