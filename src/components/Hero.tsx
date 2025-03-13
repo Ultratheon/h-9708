@@ -106,7 +106,7 @@ const Hero = () => {
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <button className="bg-white text-neutral-900 px-6 py-3 rounded-lg hover:bg-neutral-200 transition-colors flex items-center justify-center gap-2">
-            Get Started
+            Access Platform
             <ArrowRight className="w-4 h-4" />
           </button>
           <button className="bg-neutral-800 text-white px-6 py-3 rounded-lg hover:bg-neutral-700 transition-colors">
