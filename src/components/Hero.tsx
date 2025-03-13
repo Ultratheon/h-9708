@@ -65,12 +65,11 @@ const Hero = () => {
         {/* Speech bubbles */}
         <div className="mb-10 overflow-hidden">
           {/* Top row */}
-          <div className="flex flex-wrap justify-center gap-2 mb-3">
+          <div className="flex flex-wrap justify-center gap-2 mb-3 animate-slide-right" style={{ animationDelay: '0.2s' }}>
             {topRowBubbles.map((text, index) => (
               <div 
                 key={`top-${index}`}
-                className="speech-bubble bg-neutral-800 text-white px-4 py-2 rounded-full text-sm animate-slide-right"
-                style={{ animationDelay: `${index * 0.3}s` }}
+                className="speech-bubble bg-neutral-800 text-white px-4 py-2 rounded-full text-sm"
               >
                 {text}
               </div>
@@ -78,12 +77,11 @@ const Hero = () => {
           </div>
           
           {/* Middle row */}
-          <div className="flex flex-wrap justify-center gap-2 mb-3">
+          <div className="flex flex-wrap justify-center gap-2 mb-3 animate-slide-right" style={{ animationDelay: '0.6s' }}>
             {middleRowBubbles.map((text, index) => (
               <div 
                 key={`middle-${index}`}
-                className="speech-bubble bg-neutral-800 text-white px-4 py-2 rounded-full text-sm animate-slide-right"
-                style={{ animationDelay: `${(index + 3) * 0.3}s` }}
+                className="speech-bubble bg-neutral-800 text-white px-4 py-2 rounded-full text-sm"
               >
                 {text}
               </div>
@@ -91,12 +89,11 @@ const Hero = () => {
           </div>
           
           {/* Bottom row */}
-          <div className="flex flex-wrap justify-center gap-2">
+          <div className="flex flex-wrap justify-center gap-2 animate-slide-right" style={{ animationDelay: '1s' }}>
             {bottomRowBubbles.map((text, index) => (
               <div 
                 key={`bottom-${index}`}
-                className="speech-bubble bg-neutral-800 text-white px-4 py-2 rounded-full text-sm animate-slide-right"
-                style={{ animationDelay: `${(index + 6) * 0.3}s` }}
+                className="speech-bubble bg-neutral-800 text-white px-4 py-2 rounded-full text-sm"
               >
                 {text}
               </div>
