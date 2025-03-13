@@ -45,7 +45,7 @@ const Pricing = () => {
           </div>
           
           {/* Second Card - $99 (was $199) */}
-          <div className="glass-card rounded-xl p-6 flex flex-col h-full relative border-t-2 border-t-purple-500 scale-105 z-10 hover:translate-y-[-8px] transition-transform duration-300">
+          <div className="bg-neutral-800 rounded-xl p-6 flex flex-col h-full relative border-t-2 border-t-purple-500 scale-105 z-10 hover:translate-y-[-8px] transition-transform duration-300 shadow-lg">
             <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-purple-500 text-white text-xs font-bold py-1 px-3 rounded-full">
               POPULAR
             </div>
@@ -60,31 +60,31 @@ const Pricing = () => {
                 <svg className="w-5 h-5 text-purple-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                 </svg>
-                <span className="text-neutral-300">3 Users</span>
+                <span className="text-white">3 Users</span>
               </li>
               <li className="flex items-start">
                 <svg className="w-5 h-5 text-purple-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                 </svg>
-                <span className="text-neutral-300">3 Integrations</span>
+                <span className="text-white">3 Integrations</span>
               </li>
               <li className="flex items-start">
                 <svg className="w-5 h-5 text-purple-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                 </svg>
-                <span className="text-neutral-300">Automated Insights</span>
+                <span className="text-white">Automated Insights</span>
               </li>
               <li className="flex items-start">
                 <svg className="w-5 h-5 text-purple-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                 </svg>
-                <span className="text-neutral-300">Added Layer of Security</span>
+                <span className="text-white">Added Layer of Security</span>
               </li>
               <li className="flex items-start">
                 <svg className="w-5 h-5 text-purple-500 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                 </svg>
-                <span className="text-neutral-300">24/7 Support</span>
+                <span className="text-white">24/7 Support</span>
               </li>
             </ul>
             <button className="w-full py-3 bg-purple-500 text-white rounded-lg hover:bg-purple-600 transition-colors mt-auto">
