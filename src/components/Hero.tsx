@@ -54,12 +54,10 @@ const Hero = () => {
     <section className="pt-32 pb-16 container-padding">
       <div className="max-w-4xl mx-auto text-center">
         <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance leading-tight text-white">
-          Meet Osiri, your first AI assistant capable of making your company conversational.
-          <span className="whitespace-nowrap">
-            .Customized for{" "}
+          Meet Osiri, your first AI assistant capable of making your company conversational. Customized for{" "}
+          <span className="relative inline-block" style={{ minWidth: "150px" }}>
             <span 
-              className={`inline-block transition-opacity duration-500 font-extrabold italic bg-gradient-to-r ${wordColors[currentWordIndex]} bg-clip-text text-transparent ${fade ? 'opacity-0' : 'opacity-100'}`}
-              style={{ minWidth: "150px" }}
+              className={`absolute left-0 transition-opacity duration-500 font-extrabold italic bg-gradient-to-r ${wordColors[currentWordIndex]} bg-clip-text text-transparent ${fade ? 'opacity-0' : 'opacity-100'}`}
             >
               {words[currentWordIndex]}
             </span>
