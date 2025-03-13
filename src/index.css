@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -18,7 +17,7 @@
 
 @layer components {
   .glass-card {
-    @apply bg-neutral-800/50 backdrop-blur-lg border border-neutral-700/20 shadow-lg;
+    @apply bg-neutral-800/50 backdrop-blur-lg border border-neutral-700/20 shadow-lg hover:border-neutral-600/50 hover:bg-neutral-800/70;
   }
   
   .container-padding {
@@ -71,8 +70,6 @@
 .animate-unified-slide {
   animation: unified-slide 30s linear infinite;
 }
-
-/* Removed bubble-float animation */
 
 @keyframes float {
   0%, 100% { 
