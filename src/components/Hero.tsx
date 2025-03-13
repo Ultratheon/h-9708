@@ -105,12 +105,18 @@ const Hero = () => {
           </button>
         </div>
       </div>
-      <div className="mt-16 glass-card rounded-xl p-4 max-w-4xl mx-auto">
-        <img 
-          src="/public/lovable-uploads/0b79baec-471c-42d9-a058-516bfc58fd6d.png" 
-          alt="Osiri Dashboard" 
-          className="rounded-lg w-full" 
-        />
+      
+      {/* Dashboard section with blue background that spans full width */}
+      <div className="mt-16 w-full bg-[#1A2744] py-16 -mx-6 md:-mx-8 lg:-mx-12">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="glass-card rounded-xl p-4 backdrop-blur-lg bg-[#1A2744]/40 border border-blue-900/30 shadow-xl hover:shadow-2xl transition-all duration-300">
+            <img 
+              src="/public/lovable-uploads/0b79baec-471c-42d9-a058-516bfc58fd6d.png" 
+              alt="Osiri Dashboard" 
+              className="rounded-lg w-full shadow-[0_10px_30px_rgba(0,0,0,0.3)]" 
+            />
+          </div>
+        </div>
       </div>
     </section>
   );
