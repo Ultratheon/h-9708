@@ -8,14 +8,51 @@
   <title>OsiriAI - Your AI Assistant for Business</title>
   <meta name="description" content="OsiriAI is your first AI assistant capable of making your company conversational. Turn data into actionable insights through natural conversations." />
   <meta name="author" content="OsiriAI" />
+  
+  <!-- SEO Meta Tags -->
+  <meta name="keywords" content="AI assistant, business AI, conversational AI, data insights, business intelligence, natural language processing, OsiriAI" />
+  <meta name="robots" content="index, follow" />
+  <meta name="language" content="English" />
+  
+  <!-- Open Graph / Social Media Meta Tags -->
+  <meta property="og:title" content="OsiriAI - Your AI Assistant for Business" />
+  <meta property="og:description" content="Turn your business data into actionable insights through natural conversations with OsiriAI." />
   <meta property="og:image" content="/og-image.svg" />
+  <meta property="og:url" content="https://osiriai.com" />
+  <meta property="og:type" content="website" />
+  
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="OsiriAI - Your AI Assistant for Business" />
+  <meta name="twitter:description" content="Your first AI assistant capable of making your company conversational." />
+  <meta name="twitter:image" content="/og-image.svg" />
+  
+  <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="canonical" href="https://osiriai.com" />
 </head>
 
 <body>
   <div id="root"></div>
   <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
   <script type="module" src="/src/main.tsx"></script>
+  
+  <!-- Structured Data for SEO -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "OsiriAI",
+      "applicationCategory": "BusinessApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "OsiriAI is your first AI assistant capable of making your company conversational. Turn data into actionable insights through natural conversations.",
+      "operatingSystem": "Web"
+    }
+  </script>
 </body>
 
 </html>
