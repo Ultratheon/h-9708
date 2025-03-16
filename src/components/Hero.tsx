@@ -106,13 +106,13 @@ const Hero = () => {
         </div>
       </div>
       
-      {/* Dashboard section with the multi-panel AI dashboard - enlarged container */}
+      {/* Dashboard section with the updated dashboard image */}
       <div className="mt-16 w-full py-16 -mx-6 md:-mx-8 lg:-mx-12">
         <div className="max-w-6xl mx-auto px-6">
           <div className="glass-card rounded-xl p-4 backdrop-blur-lg bg-neutral-900/40 border border-neutral-800/30 shadow-xl hover:shadow-2xl transition-all duration-300">
             <img 
-              src="/lovable-uploads/6ac89d8c-4d30-45a0-abc0-f2d835e9a77d.png" 
-              alt="Osiri AI Multi-panel Dashboard" 
+              src="/lovable-uploads/aad86631-a8c1-4ee1-b4dc-20f711a5c043.png" 
+              alt="Osiri AI Dashboard Interface" 
               className="rounded-lg w-full shadow-[0_10px_30px_rgba(0,0,0,0.3)]" 
             />
           </div>
