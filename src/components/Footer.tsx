@@ -1,3 +1,4 @@
+
 const Footer = () => {
   return (
     <footer className="bg-primary text-white">
@@ -38,7 +39,7 @@ const Footer = () => {
         </div>
         <div className="max-w-4xl mx-auto mt-12 pt-8 border-t border-neutral-800">
           <p className="text-neutral-400 text-center">
-            © 2024 Monet. All rights reserved.
+            © 2024 Osiri. All rights reserved.
           </p>
         </div>
       </div>
