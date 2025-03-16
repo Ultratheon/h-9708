@@ -1,7 +1,5 @@
-
 const Footer = () => {
-  return (
-    <footer className="bg-primary text-white">
+  return <footer className="bg-primary text-white">
       <div className="container-padding py-16">
         <div className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
           <div>
@@ -38,13 +36,9 @@ const Footer = () => {
           </div>
         </div>
         <div className="max-w-4xl mx-auto mt-12 pt-8 border-t border-neutral-800">
-          <p className="text-neutral-400 text-center">
-            © 2024 Osiri. All rights reserved.
-          </p>
+          <p className="text-neutral-400 text-center">© 2025 Osiri AI. All rights reserved.</p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
