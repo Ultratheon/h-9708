@@ -1,4 +1,3 @@
-
 import { ArrowRight } from "lucide-react";
 import { useState, useEffect } from "react";
 
@@ -106,13 +105,13 @@ const Hero = () => {
         </div>
       </div>
       
-      {/* Dashboard section with black background that matches the overall site theme */}
+      {/* Dashboard section with the new dashboard UI image */}
       <div className="mt-16 w-full py-16 -mx-6 md:-mx-8 lg:-mx-12">
         <div className="max-w-5xl mx-auto px-6">
           <div className="glass-card rounded-xl p-4 backdrop-blur-lg bg-neutral-900/40 border border-neutral-800/30 shadow-xl hover:shadow-2xl transition-all duration-300">
             <img 
-              src="/lovable-uploads/9f69dce4-c15e-488a-a87a-5bf20e4263c7.png" 
-              alt="Osiri Dashboard" 
+              src="/lovable-uploads/936229a3-605f-4e56-8055-0df947ab1b25.png" 
+              alt="Osiri AI Dashboard" 
               className="rounded-lg w-full shadow-[0_10px_30px_rgba(0,0,0,0.3)]" 
             />
           </div>
