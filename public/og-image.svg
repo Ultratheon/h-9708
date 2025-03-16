@@ -1,0 +1,8 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#000000" />
+  <g transform="translate(550, 315) scale(5)">
+    <circle cx="0" cy="0" r="45" fill="none" stroke="#00E0FF" stroke-width="10" stroke-dasharray="15,5" />
+  </g>
+  <text x="600" y="500" font-family="Arial, sans-serif" font-size="72" font-weight="bold" fill="#FFFFFF" text-anchor="middle">OsiriAI</text>
+</svg>
