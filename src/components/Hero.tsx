@@ -111,7 +111,7 @@ const Hero = () => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="glass-card rounded-xl p-4 backdrop-blur-lg bg-neutral-900/40 border border-neutral-800/30 shadow-xl hover:shadow-2xl transition-all duration-300">
             <img 
-              src="/lovable-uploads/4b372818-0393-46f9-b88a-c9201424954a.png" 
+              src="/lovable-uploads/f14ff298-b1a7-4d8a-9dcd-87c59e2c23b0.png" 
               alt="Osiri AI Dashboard Interface" 
               className="rounded-lg w-full shadow-[0_10px_30px_rgba(0,0,0,0.3)]" 
             />
