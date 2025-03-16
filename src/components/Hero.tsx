@@ -46,14 +46,14 @@ const Hero = () => {
           Integrate Osiri with your business and turn data into actionable insights through natural conversations.
         </p>
 
-        {/* Speech bubbles - positioned closer to the subtitle text */}
+        {/* Speech bubbles - improved size and readability */}
         <div className="mb-10 overflow-hidden relative">
           {/* Top row - with duplicated content for seamless loop */}
-          <div className="flex whitespace-nowrap animate-unified-slide mb-3 w-fit">
+          <div className="flex whitespace-nowrap animate-unified-slide mb-4 w-fit">
             {duplicateForScroll(topRowBubbles).map((text, index) => (
               <div 
                 key={`top-${index}`} 
-                className="speech-bubble bg-neutral-800 text-white px-4 py-2 rounded-full text-sm mx-2 inline-block"
+                className="speech-bubble bg-neutral-800 text-white px-5 py-3 rounded-full text-base mx-3 inline-block font-medium shadow-lg"
               >
                 {text}
               </div>
@@ -62,7 +62,7 @@ const Hero = () => {
           
           {/* Middle row - with duplicated content for seamless loop */}
           <div 
-            className="flex whitespace-nowrap animate-unified-slide mb-3 w-fit" 
+            className="flex whitespace-nowrap animate-unified-slide mb-4 w-fit" 
             style={{
               animationDelay: '-10s'
             }}
@@ -70,7 +70,7 @@ const Hero = () => {
             {duplicateForScroll(middleRowBubbles).map((text, index) => (
               <div 
                 key={`middle-${index}`} 
-                className="speech-bubble bg-neutral-800 text-white px-4 py-2 rounded-full text-sm mx-2 inline-block"
+                className="speech-bubble bg-neutral-800 text-white px-5 py-3 rounded-full text-base mx-3 inline-block font-medium shadow-lg"
               >
                 {text}
               </div>
@@ -87,7 +87,7 @@ const Hero = () => {
             {duplicateForScroll(bottomRowBubbles).map((text, index) => (
               <div 
                 key={`bottom-${index}`} 
-                className="speech-bubble bg-neutral-800 text-white px-4 py-2 rounded-full text-sm mx-2 inline-block"
+                className="speech-bubble bg-neutral-800 text-white px-5 py-3 rounded-full text-base mx-3 inline-block font-medium shadow-lg"
               >
                 {text}
               </div>
@@ -106,9 +106,9 @@ const Hero = () => {
         </div>
       </div>
       
-      {/* Dashboard section with the multi-panel AI dashboard */}
+      {/* Dashboard section with the multi-panel AI dashboard - enlarged container */}
       <div className="mt-16 w-full py-16 -mx-6 md:-mx-8 lg:-mx-12">
-        <div className="max-w-5xl mx-auto px-6">
+        <div className="max-w-6xl mx-auto px-6">
           <div className="glass-card rounded-xl p-4 backdrop-blur-lg bg-neutral-900/40 border border-neutral-800/30 shadow-xl hover:shadow-2xl transition-all duration-300">
             <img 
               src="/lovable-uploads/6ac89d8c-4d30-45a0-abc0-f2d835e9a77d.png" 

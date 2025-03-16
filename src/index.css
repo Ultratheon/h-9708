@@ -43,7 +43,9 @@
   
   .speech-bubble {
     @apply transition-all duration-300 hover:bg-neutral-700;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 12px -1px rgba(0, 0, 0, 0.2), 0 2px 8px -1px rgba(0, 0, 0, 0.1);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
   }
 }
 
@@ -85,7 +87,7 @@
 }
 
 .animate-unified-slide {
-  animation: unified-slide 30s linear infinite;
+  animation: unified-slide 35s linear infinite;
 }
 
 @keyframes float {
