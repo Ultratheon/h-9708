@@ -1,6 +1,14 @@
 
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
   <rect width="400" height="400" fill="#000000"/>
-  <circle cx="200" cy="200" r="150" fill="#1EAEDB"/>
-  <text x="200" y="230" font-family="Arial, sans-serif" font-size="160" font-weight="bold" fill="#FFFFFF" text-anchor="middle" dominant-baseline="middle">O</text>
+  <circle cx="200" cy="200" r="150" fill="transparent" stroke="#1EAEDB" stroke-width="30"/>
+  <path d="M200,50 
+    A150,150 0 0,1 350,200 
+    A150,150 0 0,1 200,350 
+    A150,150 0 0,1 50,200 
+    A150,150 0 0,1 200,50" 
+    fill="transparent" 
+    stroke="#33C3F0" 
+    stroke-width="15" 
+    stroke-dasharray="30,15"/>
 </svg>
