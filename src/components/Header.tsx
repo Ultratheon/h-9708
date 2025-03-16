@@ -8,7 +8,7 @@ const Header = () => {
   return <header className="fixed top-0 left-0 right-0 z-50 bg-neutral-900/90 backdrop-blur-lg border-b border-neutral-800">
       <nav className="container-padding mx-auto flex h-16 items-center justify-between">
         <a href="/" className="flex items-center gap-2">
-          <img src="/favicon.svg" alt="OsiriAI Logo" className="w-8 h-8 rounded-full border border-neutral-700" />
+          <img src="/favicon.svg" alt="OsiriAI Logo" className="w-10 h-10 rounded-full border-2 border-neutral-500" />
           <span className="text-xl font-semibold text-white">OsiriAI</span>
         </a>
         
