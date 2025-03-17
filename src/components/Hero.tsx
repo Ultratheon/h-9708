@@ -1,6 +1,7 @@
 
 import { ArrowRight } from "lucide-react";
 import { useState, useEffect } from "react";
+import { Button } from "./ui/button";
 
 const Hero = () => {
   const words = ["Business", "Restaurants", "Telecom", "Construction", "Retail", "E-commerce", "SaaS"];
@@ -96,7 +97,7 @@ const Hero = () => {
         </div>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <button className="bg-white text-neutral-900 px-6 py-3 rounded-lg hover:bg-neutral-200 transition-colors flex items-center justify-center gap-2">
+          <button className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-3 rounded-lg hover:from-purple-700 hover:to-indigo-700 transition-all shadow-lg flex items-center justify-center gap-2">
             Access Platform
             <ArrowRight className="w-4 h-4" />
           </button>
