@@ -97,7 +97,7 @@ const Hero = () => {
         </div>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <button className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-3 rounded-lg hover:from-purple-700 hover:to-indigo-700 transition-all shadow-lg flex items-center justify-center gap-2">
+          <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-3 rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all shadow-lg flex items-center justify-center gap-2">
             Access Platform
             <ArrowRight className="w-4 h-4" />
           </button>
