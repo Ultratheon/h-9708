@@ -1,7 +1,7 @@
 
 import { ArrowRight } from "lucide-react";
 import { useState, useEffect } from "react";
-import { Button } from "./ui/button";
+import { Helmet } from "react-helmet";
 
 const Hero = () => {
   const words = ["Business", "Restaurants", "Telecom", "Construction", "Retail", "E-commerce", "SaaS"];
@@ -30,96 +30,106 @@ const Hero = () => {
   const duplicateForScroll = array => [...array, ...array];
 
   return (
-    <section className="pt-32 pb-16 container-padding">
-      <div className="max-w-4xl mx-auto text-center">
-        <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance leading-tight text-white">
-          Meet Osiri, your first AI assistant capable of making your company conversational.
-          <div className="flex items-center justify-center">
-            <span className="whitespace-nowrap">Customized for</span>
-            <div className="inline-block ml-2 min-w-[120px] text-center">
-              <span className={`inline-block transition-opacity duration-500 font-extrabold italic bg-gradient-to-r ${wordColors[currentWordIndex]} bg-clip-text text-transparent ${fade ? 'opacity-0' : 'opacity-100'}`}>
-                {words[currentWordIndex]}
-              </span>
+    <>
+      <Helmet>
+        <title>OsiriAI - Your AI Business Assistant | Data Insights Through Conversation</title>
+        <meta name="description" content="OsiriAI transforms your business data into actionable insights through natural conversations. Customize for any industry including Retail, E-commerce, Restaurants, and more." />
+        <meta name="keywords" content="AI business assistant, conversational AI, business intelligence, data insights, natural language processing" />
+        <link rel="canonical" href="https://osiriai.com/" />
+      </Helmet>
+      
+      <section className="pt-32 pb-16 container-padding" aria-label="AI Business Assistant Introduction">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance leading-tight text-white">
+            Meet Osiri, your first AI assistant capable of making your company conversational.
+            <div className="flex items-center justify-center">
+              <span className="whitespace-nowrap">Customized for</span>
+              <div className="inline-block ml-2 min-w-[120px] text-center">
+                <span className={`inline-block transition-opacity duration-500 font-extrabold italic bg-gradient-to-r ${wordColors[currentWordIndex]} bg-clip-text text-transparent ${fade ? 'opacity-0' : 'opacity-100'}`}>
+                  {words[currentWordIndex]}
+                </span>
+              </div>
+            </div>
+          </h1>
+          <p className="text-lg md:text-xl text-neutral-400 mb-4 max-w-xl mx-auto">
+            Integrate Osiri with your business and turn data into actionable insights through natural conversations.
+          </p>
+
+          {/* Speech bubbles - improved size and readability */}
+          <div className="mb-10 overflow-hidden relative">
+            {/* Top row - with duplicated content for seamless loop */}
+            <div className="flex whitespace-nowrap animate-unified-slide mb-4 w-fit">
+              {duplicateForScroll(topRowBubbles).map((text, index) => (
+                <div 
+                  key={`top-${index}`} 
+                  className="speech-bubble bg-neutral-800 text-white px-5 py-3 rounded-full text-base mx-3 inline-block font-medium shadow-lg"
+                >
+                  {text}
+                </div>
+              ))}
+            </div>
+            
+            {/* Middle row - with duplicated content for seamless loop */}
+            <div 
+              className="flex whitespace-nowrap animate-unified-slide mb-4 w-fit" 
+              style={{
+                animationDelay: '-10s'
+              }}
+            >
+              {duplicateForScroll(middleRowBubbles).map((text, index) => (
+                <div 
+                  key={`middle-${index}`} 
+                  className="speech-bubble bg-neutral-800 text-white px-5 py-3 rounded-full text-base mx-3 inline-block font-medium shadow-lg"
+                >
+                  {text}
+                </div>
+              ))}
+            </div>
+            
+            {/* Bottom row - with duplicated content for seamless loop */}
+            <div 
+              className="flex whitespace-nowrap animate-unified-slide w-fit" 
+              style={{
+                animationDelay: '-20s'
+              }}
+            >
+              {duplicateForScroll(bottomRowBubbles).map((text, index) => (
+                <div 
+                  key={`bottom-${index}`} 
+                  className="speech-bubble bg-neutral-800 text-white px-5 py-3 rounded-full text-base mx-3 inline-block font-medium shadow-lg"
+                >
+                  {text}
+                </div>
+              ))}
             </div>
           </div>
-        </h1>
-        <p className="text-lg md:text-xl text-neutral-400 mb-4 max-w-xl mx-auto">
-          Integrate Osiri with your business and turn data into actionable insights through natural conversations.
-        </p>
 
-        {/* Speech bubbles - improved size and readability */}
-        <div className="mb-10 overflow-hidden relative">
-          {/* Top row - with duplicated content for seamless loop */}
-          <div className="flex whitespace-nowrap animate-unified-slide mb-4 w-fit">
-            {duplicateForScroll(topRowBubbles).map((text, index) => (
-              <div 
-                key={`top-${index}`} 
-                className="speech-bubble bg-neutral-800 text-white px-5 py-3 rounded-full text-base mx-3 inline-block font-medium shadow-lg"
-              >
-                {text}
-              </div>
-            ))}
-          </div>
-          
-          {/* Middle row - with duplicated content for seamless loop */}
-          <div 
-            className="flex whitespace-nowrap animate-unified-slide mb-4 w-fit" 
-            style={{
-              animationDelay: '-10s'
-            }}
-          >
-            {duplicateForScroll(middleRowBubbles).map((text, index) => (
-              <div 
-                key={`middle-${index}`} 
-                className="speech-bubble bg-neutral-800 text-white px-5 py-3 rounded-full text-base mx-3 inline-block font-medium shadow-lg"
-              >
-                {text}
-              </div>
-            ))}
-          </div>
-          
-          {/* Bottom row - with duplicated content for seamless loop */}
-          <div 
-            className="flex whitespace-nowrap animate-unified-slide w-fit" 
-            style={{
-              animationDelay: '-20s'
-            }}
-          >
-            {duplicateForScroll(bottomRowBubbles).map((text, index) => (
-              <div 
-                key={`bottom-${index}`} 
-                className="speech-bubble bg-neutral-800 text-white px-5 py-3 rounded-full text-base mx-3 inline-block font-medium shadow-lg"
-              >
-                {text}
-              </div>
-            ))}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-3 rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all shadow-lg flex items-center justify-center gap-2">
+              Access Platform
+              <ArrowRight className="w-4 h-4" />
+            </button>
+            <button className="bg-neutral-800 text-white px-6 py-3 rounded-lg hover:bg-neutral-700 transition-colors">
+              Learn More
+            </button>
           </div>
         </div>
-
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-3 rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all shadow-lg flex items-center justify-center gap-2">
-            Access Platform
-            <ArrowRight className="w-4 h-4" />
-          </button>
-          <button className="bg-neutral-800 text-white px-6 py-3 rounded-lg hover:bg-neutral-700 transition-colors">
-            Learn More
-          </button>
-        </div>
-      </div>
-      
-      {/* Dashboard section with the updated dashboard image */}
-      <div className="mt-16 w-full py-16 -mx-6 md:-mx-8 lg:-mx-12">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="glass-card rounded-xl p-4 backdrop-blur-lg bg-neutral-900/40 border border-neutral-800/30 shadow-xl hover:shadow-2xl transition-all duration-300">
-            <img 
-              src="/lovable-uploads/f14ff298-b1a7-4d8a-9dcd-87c59e2c23b0.png" 
-              alt="Osiri AI Dashboard Interface" 
-              className="rounded-lg w-full shadow-[0_10px_30px_rgba(0,0,0,0.3)]" 
-            />
+        
+        {/* Dashboard section with the updated dashboard image */}
+        <div className="mt-16 w-full py-16 -mx-6 md:-mx-8 lg:-mx-12">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="glass-card rounded-xl p-4 backdrop-blur-lg bg-neutral-900/40 border border-neutral-800/30 shadow-xl hover:shadow-2xl transition-all duration-300">
+              <img 
+                src="/lovable-uploads/f14ff298-b1a7-4d8a-9dcd-87c59e2c23b0.png" 
+                alt="Osiri AI Dashboard Interface showing analytics, chat assistant, and market analysis" 
+                className="rounded-lg w-full shadow-[0_10px_30px_rgba(0,0,0,0.3)]" 
+                loading="lazy"
+              />
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 
