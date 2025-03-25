@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://osiriai.com/sitemap.xml
+Sitemap: https://osiri.ai/sitemap.xml
