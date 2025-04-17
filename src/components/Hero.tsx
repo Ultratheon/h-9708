@@ -1,4 +1,3 @@
-
 import { ArrowRight } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
@@ -9,7 +8,6 @@ const Hero = () => {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [fade, setFade] = useState(false);
 
-  // Speech bubble texts for the three rows
   const topRowBubbles = ["Tell me how to integrate a BB6630", "Show me the sales month over month", "What country does my app downloads come from"];
   const middleRowBubbles = ["Which wine is our best seller and why", "Generate the daily report on today", "Why am I losing orders despite rising traffic"];
   const bottomRowBubbles = ["What product or customer trends are emerging over time", "How are discounts and promotions really affecting my margins"];
@@ -20,13 +18,12 @@ const Hero = () => {
       setTimeout(() => {
         setCurrentWordIndex(prevIndex => (prevIndex + 1) % words.length);
         setFade(false);
-      }, 500); // Wait for fade out before changing word
-    }, 3000); // Change word every 3 seconds
+      }, 500);
+    }, 3000);
 
     return () => clearInterval(wordInterval);
   }, []);
 
-  // Helper function to duplicate arrays for seamless sliding
   const duplicateForScroll = array => [...array, ...array];
 
   return (
@@ -55,9 +52,7 @@ const Hero = () => {
             Integrate Osiri with your business and turn data into actionable insights through natural conversations.
           </p>
 
-          {/* Speech bubbles - improved size and readability */}
           <div className="mb-10 overflow-hidden relative">
-            {/* Top row - with duplicated content for seamless loop */}
             <div className="flex whitespace-nowrap animate-unified-slide mb-4 w-fit">
               {duplicateForScroll(topRowBubbles).map((text, index) => (
                 <div 
@@ -69,7 +64,6 @@ const Hero = () => {
               ))}
             </div>
             
-            {/* Middle row - with duplicated content for seamless loop */}
             <div 
               className="flex whitespace-nowrap animate-unified-slide mb-4 w-fit" 
               style={{
@@ -86,7 +80,6 @@ const Hero = () => {
               ))}
             </div>
             
-            {/* Bottom row - with duplicated content for seamless loop */}
             <div 
               className="flex whitespace-nowrap animate-unified-slide w-fit" 
               style={{
@@ -105,17 +98,16 @@ const Hero = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-3 rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all shadow-lg flex items-center justify-center gap-2">
+            <a href="/demo" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-3 rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all shadow-lg flex items-center justify-center gap-2">
               Access Platform
               <ArrowRight className="w-4 h-4" />
-            </button>
+            </a>
             <button className="bg-neutral-800 text-white px-6 py-3 rounded-lg hover:bg-neutral-700 transition-colors">
               Learn More
             </button>
           </div>
         </div>
         
-        {/* Dashboard section with the updated dashboard image */}
         <div className="mt-16 w-full py-16 -mx-6 md:-mx-8 lg:-mx-12">
           <div className="max-w-7xl mx-auto px-6">
             <div className="glass-card rounded-xl p-4 backdrop-blur-lg bg-neutral-900/40 border border-neutral-800/30 shadow-xl hover:shadow-2xl transition-all duration-300">
