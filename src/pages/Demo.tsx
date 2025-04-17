@@ -12,6 +12,11 @@ const Demo = () => {
     setShowDashboard(true);
   };
 
+  const handleBackToForm = () => {
+    setShowDashboard(false);
+    setUrl("");
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-red-900 via-orange-800 to-purple-900 relative overflow-hidden">
       {/* Nebula effect */}
@@ -35,7 +40,15 @@ const Demo = () => {
         {!showDashboard ? (
           <UrlForm onSubmit={handleSubmit} />
         ) : (
-          <AnalyticsDashboard url={url} />
+          <div>
+            <button
+              onClick={handleBackToForm}
+              className="mb-8 flex items-center gap-2 text-white/70 hover:text-white transition-colors"
+            >
+              ← Back to URL form
+            </button>
+            <AnalyticsDashboard url={url} />
+          </div>
         )}
       </div>
     </div>

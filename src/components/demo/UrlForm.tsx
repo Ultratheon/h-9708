@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
+import { toast } from "sonner";
 
 interface UrlFormProps {
   onSubmit: (url: string) => void;
@@ -9,10 +10,30 @@ interface UrlFormProps {
 
 export const UrlForm = ({ onSubmit }: UrlFormProps) => {
   const [url, setUrl] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    onSubmit(url);
+    
+    // Simple URL validation
+    if (!url || !url.match(/^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([/\w.-]*)*\/?$/)) {
+      toast.error("Please enter a valid URL");
+      return;
+    }
+    
+    // Ensure URL has http:// or https:// prefix
+    let formattedUrl = url;
+    if (!formattedUrl.startsWith('http')) {
+      formattedUrl = 'https://' + formattedUrl;
+    }
+    
+    setIsSubmitting(true);
+    
+    // Simulate a brief loading period to give the user feedback
+    setTimeout(() => {
+      setIsSubmitting(false);
+      onSubmit(formattedUrl);
+    }, 800);
   };
 
   return (
@@ -31,12 +52,14 @@ export const UrlForm = ({ onSubmit }: UrlFormProps) => {
           onChange={(e) => setUrl(e.target.value)}
           required
           className="bg-white/10 border-white/20 text-white placeholder:text-white/50"
+          disabled={isSubmitting}
         />
         <Button 
           type="submit"
           className="w-full bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 text-white"
+          disabled={isSubmitting}
         >
-          Generate Analytics
+          {isSubmitting ? "Analyzing..." : "Generate Analytics"}
         </Button>
       </form>
     </div>
