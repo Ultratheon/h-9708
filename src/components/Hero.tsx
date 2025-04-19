@@ -1,3 +1,4 @@
+
 import { ArrowRight } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
@@ -38,7 +39,7 @@ const Hero = () => {
       <section className="pt-32 pb-16 container-padding" aria-label="AI Business Assistant Introduction">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance leading-tight text-white">
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-400">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-red-400 to-magenta-500">
               Meet Osiri
             </span>
             , your first AI assistant capable of making your company conversational.
