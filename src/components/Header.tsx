@@ -13,7 +13,7 @@ const Header = () => {
             alt="OsiriAI Logo" 
             className="w-10 h-10 rounded-full" 
           />
-          <span className="text-xl font-semibold text-white">OsiriAI</span>
+          <span className="text-xl font-semibold text-white bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-400">OsiriAI</span>
         </a>
         
         <div className="hidden md:flex items-center gap-8">
