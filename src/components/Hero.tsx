@@ -38,7 +38,10 @@ const Hero = () => {
       <section className="pt-32 pb-16 container-padding" aria-label="AI Business Assistant Introduction">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance leading-tight text-white">
-            Meet Osiri, your first AI assistant capable of making your company conversational.
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-400">
+              Meet Osiri
+            </span>
+            , your first AI assistant capable of making your company conversational.
             <div className="flex items-center justify-center">
               <span className="whitespace-nowrap">Customized for</span>
               <div className="inline-block ml-2 min-w-[120px] text-center">
