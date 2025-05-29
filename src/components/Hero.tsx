@@ -114,12 +114,70 @@ const Hero = () => {
         <div className="mt-16 w-full py-16 -mx-6 md:-mx-8 lg:-mx-12">
           <div className="max-w-7xl mx-auto px-6">
             <div className="glass-card rounded-xl p-4 backdrop-blur-lg bg-neutral-900/40 border border-neutral-800/30 shadow-xl hover:shadow-2xl transition-all duration-300">
-              <img 
-                src="/lovable-uploads/cfb9731c-504b-44f5-a799-6eafce89aa4a.png" 
-                alt="Analytics dashboard showing lead sources, revenue flow, company leads, and business metrics for app owners and small businesses" 
-                className="rounded-lg w-full shadow-[0_10px_30px_rgba(0,0,0,0.3)]" 
-                loading="lazy"
-              />
+              <div className="rounded-lg overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.3)]">
+                <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 p-6">
+                  {/* Header */}
+                  <div className="mb-6">
+                    <h2 className="text-2xl font-bold text-white mb-1">Business Analytics Dashboard</h2>
+                    <p className="text-slate-300 text-sm">Real-time insights for your growing business</p>
+                  </div>
+
+                  {/* KPI Cards */}
+                  <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+                    <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+                      <p className="text-slate-300 text-xs mb-1">Total Revenue</p>
+                      <p className="text-lg font-bold text-white">$328K</p>
+                      <p className="text-green-400 text-xs">+12.5%</p>
+                    </div>
+                    <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+                      <p className="text-slate-300 text-xs mb-1">Active Users</p>
+                      <p className="text-lg font-bold text-white">24.6K</p>
+                      <p className="text-blue-400 text-xs">+8.2%</p>
+                    </div>
+                    <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+                      <p className="text-slate-300 text-xs mb-1">Conversion</p>
+                      <p className="text-lg font-bold text-white">3.24%</p>
+                      <p className="text-yellow-400 text-xs">+0.3%</p>
+                    </div>
+                    <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+                      <p className="text-slate-300 text-xs mb-1">Orders</p>
+                      <p className="text-lg font-bold text-white">1,309</p>
+                      <p className="text-purple-400 text-xs">+15.8%</p>
+                    </div>
+                  </div>
+
+                  {/* Charts Preview */}
+                  <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+                    <div className="lg:col-span-2 bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+                      <h3 className="text-white font-semibold mb-3 text-sm">Revenue Trends</h3>
+                      <div className="h-32 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded flex items-end justify-around p-2">
+                        <div className="bg-blue-500 w-4 h-16 rounded-t"></div>
+                        <div className="bg-blue-500 w-4 h-20 rounded-t"></div>
+                        <div className="bg-blue-500 w-4 h-12 rounded-t"></div>
+                        <div className="bg-blue-500 w-4 h-24 rounded-t"></div>
+                        <div className="bg-blue-500 w-4 h-18 rounded-t"></div>
+                        <div className="bg-blue-500 w-4 h-28 rounded-t"></div>
+                      </div>
+                    </div>
+                    <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+                      <h3 className="text-white font-semibold mb-3 text-sm">Traffic Sources</h3>
+                      <div className="flex items-center justify-center">
+                        <div className="w-20 h-20 rounded-full border-8 border-blue-500 border-r-green-500 border-b-yellow-500 border-l-red-500"></div>
+                      </div>
+                      <div className="mt-3 space-y-1">
+                        <div className="flex items-center text-xs">
+                          <div className="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
+                          <span className="text-slate-300">Organic 45%</span>
+                        </div>
+                        <div className="flex items-center text-xs">
+                          <div className="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
+                          <span className="text-slate-300">Direct 25%</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
