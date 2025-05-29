@@ -1,3 +1,4 @@
+
 import { ArrowRight } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
@@ -37,9 +38,11 @@ const Hero = () => {
       
       <section className="pt-32 pb-16 container-padding" aria-label="AI Business Assistant Introduction">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance leading-tight text-white">
-            Meet Osiri, your first AI assistant capable of making your company conversational.
-            <div className="flex items-center justify-center">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance leading-tight">
+            <span className="bg-gradient-to-r from-red-400 to-magenta-500 bg-clip-text text-transparent">
+              Meet Osiri, your first AI assistant capable of making your company conversational.
+            </span>
+            <div className="flex items-center justify-center text-white">
               <span className="whitespace-nowrap">Customized for</span>
               <div className="inline-block ml-2 min-w-[120px] text-center">
                 <span className={`inline-block transition-opacity duration-500 font-extrabold italic bg-gradient-to-r ${wordColors[currentWordIndex]} bg-clip-text text-transparent ${fade ? 'opacity-0' : 'opacity-100'}`}>
@@ -112,8 +115,8 @@ const Hero = () => {
           <div className="max-w-7xl mx-auto px-6">
             <div className="glass-card rounded-xl p-4 backdrop-blur-lg bg-neutral-900/40 border border-neutral-800/30 shadow-xl hover:shadow-2xl transition-all duration-300">
               <img 
-                src="/lovable-uploads/f14ff298-b1a7-4d8a-9dcd-87c59e2c23b0.png" 
-                alt="Osiri AI Dashboard Interface showing analytics, chat assistant, and market analysis" 
+                src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=6052&q=80" 
+                alt="Modern analytics dashboard showing comprehensive business insights including charts, graphs, and key metrics for app owners and small businesses" 
                 className="rounded-lg w-full shadow-[0_10px_30px_rgba(0,0,0,0.3)]" 
                 loading="lazy"
               />
