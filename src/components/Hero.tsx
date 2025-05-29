@@ -115,8 +115,8 @@ const Hero = () => {
           <div className="max-w-7xl mx-auto px-6">
             <div className="glass-card rounded-xl p-4 backdrop-blur-lg bg-neutral-900/40 border border-neutral-800/30 shadow-xl hover:shadow-2xl transition-all duration-300">
               <img 
-                src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=6052&q=80" 
-                alt="Modern analytics dashboard showing comprehensive business insights including charts, graphs, and key metrics for app owners and small businesses" 
+                src="/lovable-uploads/cfb9731c-504b-44f5-a799-6eafce89aa4a.png" 
+                alt="Analytics dashboard showing lead sources, revenue flow, company leads, and business metrics for app owners and small businesses" 
                 className="rounded-lg w-full shadow-[0_10px_30px_rgba(0,0,0,0.3)]" 
                 loading="lazy"
               />
