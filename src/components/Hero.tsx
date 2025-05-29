@@ -1,4 +1,3 @@
-
 import { ArrowRight } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
@@ -19,7 +18,7 @@ const Hero = () => {
         <link rel="canonical" href="https://osiriai.com/" />
       </Helmet>
       
-      <section className="pt-32 pb-16 container-padding" aria-label="AI Business Assistant Introduction">
+      <section className="pt-32 pb-8 container-padding" aria-label="AI Business Assistant Introduction">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance leading-tight">
             <span className="text-white">
@@ -30,7 +29,7 @@ const Hero = () => {
             Integrate Osiri with your business and turn data into actionable insights through natural conversations.
           </p>
 
-          <div className="mb-10 overflow-hidden relative">
+          <div className="mb-8 overflow-hidden relative">
             <div className="flex whitespace-nowrap animate-unified-slide mb-4 w-fit">
               {duplicateForScroll(topRowBubbles).map((text, index) => (
                 <div 
@@ -75,7 +74,7 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <a href="/demo" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-3 rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all shadow-lg flex items-center justify-center gap-2">
               Access Platform
               <ArrowRight className="w-4 h-4" />
@@ -86,7 +85,7 @@ const Hero = () => {
           </div>
         </div>
         
-        <div className="mt-16 w-full py-16 -mx-6 md:-mx-8 lg:-mx-12">
+        <div className="mt-8 w-full py-8 -mx-6 md:-mx-8 lg:-mx-12">
           <div className="max-w-7xl mx-auto px-6">
             <div className="glass-card rounded-xl p-4 backdrop-blur-lg bg-neutral-900/40 border border-neutral-800/30 shadow-xl hover:shadow-2xl transition-all duration-300">
               <div className="rounded-lg overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.3)]">
