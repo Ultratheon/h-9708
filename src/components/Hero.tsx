@@ -3,26 +3,9 @@ import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
 
 const Hero = () => {
-  const words = ["Business", "Restaurants", "Telecom", "Construction", "Retail", "E-commerce", "SaaS"];
-  const wordColors = ["from-blue-400 to-purple-500", "from-orange-400 to-pink-500", "from-blue-500 to-cyan-400", "from-yellow-400 to-orange-500", "from-emerald-400 to-teal-500", "from-purple-400 to-pink-500", "from-cyan-400 to-blue-500"];
-  const [currentWordIndex, setCurrentWordIndex] = useState(0);
-  const [fade, setFade] = useState(false);
-
   const topRowBubbles = ["Tell me how to integrate a BB6630", "Show me the sales month over month", "What country does my app downloads come from"];
   const middleRowBubbles = ["Which wine is our best seller and why", "Generate the daily report on today", "Why am I losing orders despite rising traffic"];
   const bottomRowBubbles = ["What product or customer trends are emerging over time", "How are discounts and promotions really affecting my margins"];
-
-  useEffect(() => {
-    const wordInterval = setInterval(() => {
-      setFade(true);
-      setTimeout(() => {
-        setCurrentWordIndex(prevIndex => (prevIndex + 1) % words.length);
-        setFade(false);
-      }, 500);
-    }, 3000);
-
-    return () => clearInterval(wordInterval);
-  }, []);
 
   const duplicateForScroll = array => [...array, ...array];
 
@@ -41,14 +24,6 @@ const Hero = () => {
             <span className="text-white">
               Meet Osiri, your first AI assistant capable of making your company conversational.
             </span>
-            <div className="flex items-center justify-center text-white">
-              <span className="whitespace-nowrap">Customized for</span>
-              <div className="inline-block ml-2 min-w-[120px] text-center">
-                <span className={`inline-block transition-opacity duration-500 font-extrabold italic bg-gradient-to-r ${wordColors[currentWordIndex]} bg-clip-text text-transparent ${fade ? 'opacity-0' : 'opacity-100'}`}>
-                  {words[currentWordIndex]}
-                </span>
-              </div>
-            </div>
           </h1>
           <p className="text-lg md:text-xl text-neutral-400 mb-4 max-w-xl mx-auto">
             Integrate Osiri with your business and turn data into actionable insights through natural conversations.
