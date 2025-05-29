@@ -1,8 +1,6 @@
-
 import { ArrowRight } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
-import { Link } from "react-router-dom";
 
 const Hero = () => {
   const words = ["Business", "Restaurants", "Telecom", "Construction", "Retail", "E-commerce", "SaaS"];
@@ -40,10 +38,7 @@ const Hero = () => {
       <section className="pt-32 pb-16 container-padding" aria-label="AI Business Assistant Introduction">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance leading-tight text-white">
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-red-400 to-magenta-500">
-              Meet Osiri
-            </span>
-            , your first AI assistant capable of making your company conversational.
+            Meet Osiri, your first AI assistant capable of making your company conversational.
             <div className="flex items-center justify-center">
               <span className="whitespace-nowrap">Customized for</span>
               <div className="inline-block ml-2 min-w-[120px] text-center">
@@ -103,10 +98,10 @@ const Hero = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/demo" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-3 rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all shadow-lg flex items-center justify-center gap-2">
+            <a href="/demo" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-3 rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all shadow-lg flex items-center justify-center gap-2">
               Access Platform
               <ArrowRight className="w-4 h-4" />
-            </Link>
+            </a>
             <button className="bg-neutral-800 text-white px-6 py-3 rounded-lg hover:bg-neutral-700 transition-colors">
               Learn More
             </button>
