@@ -122,9 +122,9 @@ const Hero = () => {
                     <div className="p-4 border-b border-gray-700">
                       <div className="flex items-center gap-3 mb-4">
                         <div className="w-8 h-8 bg-purple-600 rounded-lg flex items-center justify-center">
-                          <span className="text-white text-sm font-bold">A</span>
+                          <span className="text-white text-sm font-bold">O</span>
                         </div>
-                        <span className="text-white font-medium">Acme Inc.</span>
+                        <span className="text-white font-medium">Osiri</span>
                       </div>
                       
                       {/* Navigation */}
