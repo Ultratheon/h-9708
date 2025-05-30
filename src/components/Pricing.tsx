@@ -1,7 +1,5 @@
-
 const Pricing = () => {
-  return (
-    <section className="py-16 container-padding bg-neutral-950">
+  return <section className="py-16 container-padding bg-neutral-950">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-white">
           Simple, Transparent Pricing
@@ -15,7 +13,7 @@ const Pricing = () => {
           <div className="glass-card rounded-xl p-6 flex flex-col h-full border-t-2 border-t-blue-500 hover:translate-y-[-8px] transition-transform duration-300">
             <h3 className="text-xl font-bold text-white mb-2">Starter</h3>
             <div className="mb-4">
-              <span className="text-3xl font-bold text-white">$20</span>
+              <span className="text-3xl font-bold text-white">$39</span>
               <span className="text-neutral-400">/month</span>
             </div>
             <p className="text-neutral-400 mb-6">Perfect for small businesses getting started with AI.</p>
@@ -137,8 +135,6 @@ const Pricing = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Pricing;
