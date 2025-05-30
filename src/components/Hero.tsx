@@ -1,17 +1,12 @@
-
 import { ArrowRight } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
-
 const Hero = () => {
   const topRowBubbles = ["Tell me how to integrate a BB6630", "Show me the sales month over month", "What country does my app downloads come from"];
   const middleRowBubbles = ["Which wine is our best seller and why", "Generate the daily report on today", "Why am I losing orders despite rising traffic"];
   const bottomRowBubbles = ["What product or customer trends are emerging over time", "How are discounts and promotions really affecting my margins"];
-
   const duplicateForScroll = array => [...array, ...array];
-
-  return (
-    <>
+  return <>
       <Helmet>
         <title>OsiriAI - Your AI Business Assistant | Data Insights Through Conversation</title>
         <meta name="description" content="OsiriAI transforms your business data into actionable insights through natural conversations. Customize for any industry including Retail, E-commerce, Restaurants, and more." />
@@ -26,52 +21,29 @@ const Hero = () => {
               Meet <span className="bg-gradient-to-r from-blue-300 via-cyan-300 to-sky-300 bg-clip-text text-transparent">Osiri</span>, your first AI assistant capable of making your business conversational.
             </span>
           </h1>
-          <p className="text-lg md:text-xl text-neutral-400 mb-4 max-w-xl mx-auto">
-            Integrate Osiri with your business and turn data into actionable insights through natural conversations.
-          </p>
+          
 
           <div className="mb-8 overflow-hidden relative">
             <div className="flex whitespace-nowrap animate-unified-slide mb-4 w-fit">
-              {duplicateForScroll(topRowBubbles).map((text, index) => (
-                <div 
-                  key={`top-${index}`} 
-                  className="speech-bubble bg-neutral-800 text-white px-5 py-3 rounded-full text-base mx-3 inline-block font-medium shadow-lg"
-                >
+              {duplicateForScroll(topRowBubbles).map((text, index) => <div key={`top-${index}`} className="speech-bubble bg-neutral-800 text-white px-5 py-3 rounded-full text-base mx-3 inline-block font-medium shadow-lg">
                   {text}
-                </div>
-              ))}
+                </div>)}
             </div>
             
-            <div 
-              className="flex whitespace-nowrap animate-unified-slide mb-4 w-fit" 
-              style={{
-                animationDelay: '-10s'
-              }}
-            >
-              {duplicateForScroll(middleRowBubbles).map((text, index) => (
-                <div 
-                  key={`middle-${index}`} 
-                  className="speech-bubble bg-neutral-800 text-white px-5 py-3 rounded-full text-base mx-3 inline-block font-medium shadow-lg"
-                >
+            <div className="flex whitespace-nowrap animate-unified-slide mb-4 w-fit" style={{
+            animationDelay: '-10s'
+          }}>
+              {duplicateForScroll(middleRowBubbles).map((text, index) => <div key={`middle-${index}`} className="speech-bubble bg-neutral-800 text-white px-5 py-3 rounded-full text-base mx-3 inline-block font-medium shadow-lg">
                   {text}
-                </div>
-              ))}
+                </div>)}
             </div>
             
-            <div 
-              className="flex whitespace-nowrap animate-unified-slide w-fit" 
-              style={{
-                animationDelay: '-20s'
-              }}
-            >
-              {duplicateForScroll(bottomRowBubbles).map((text, index) => (
-                <div 
-                  key={`bottom-${index}`} 
-                  className="speech-bubble bg-neutral-800 text-white px-5 py-3 rounded-full text-base mx-3 inline-block font-medium shadow-lg"
-                >
+            <div className="flex whitespace-nowrap animate-unified-slide w-fit" style={{
+            animationDelay: '-20s'
+          }}>
+              {duplicateForScroll(bottomRowBubbles).map((text, index) => <div key={`bottom-${index}`} className="speech-bubble bg-neutral-800 text-white px-5 py-3 rounded-full text-base mx-3 inline-block font-medium shadow-lg">
                   {text}
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
 
@@ -137,124 +109,93 @@ const Hero = () => {
                           <svg className="w-full h-full" viewBox="0 0 500 300">
                             <defs>
                               <linearGradient id="primaryGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                                <stop offset="0%" stopColor="#06B6D4" stopOpacity="0.4"/>
-                                <stop offset="50%" stopColor="#3B82F6" stopOpacity="0.2"/>
-                                <stop offset="100%" stopColor="#8B5CF6" stopOpacity="0"/>
+                                <stop offset="0%" stopColor="#06B6D4" stopOpacity="0.4" />
+                                <stop offset="50%" stopColor="#3B82F6" stopOpacity="0.2" />
+                                <stop offset="100%" stopColor="#8B5CF6" stopOpacity="0" />
                               </linearGradient>
                               <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                                <stop offset="0%" stopColor="#06B6D4"/>
-                                <stop offset="30%" stopColor="#3B82F6"/>
-                                <stop offset="70%" stopColor="#8B5CF6"/>
-                                <stop offset="100%" stopColor="#EC4899"/>
+                                <stop offset="0%" stopColor="#06B6D4" />
+                                <stop offset="30%" stopColor="#3B82F6" />
+                                <stop offset="70%" stopColor="#8B5CF6" />
+                                <stop offset="100%" stopColor="#EC4899" />
                               </linearGradient>
                               <linearGradient id="predictionGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                                <stop offset="0%" stopColor="#10B981"/>
-                                <stop offset="100%" stopColor="#06B6D4"/>
+                                <stop offset="0%" stopColor="#10B981" />
+                                <stop offset="100%" stopColor="#06B6D4" />
                               </linearGradient>
                               
                               {/* Glow Effect */}
                               <filter id="glow">
-                                <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                                <feGaussianBlur stdDeviation="3" result="coloredBlur" />
                                 <feMerge> 
-                                  <feMergeNode in="coloredBlur"/>
-                                  <feMergeNode in="SourceGraphic"/>
+                                  <feMergeNode in="coloredBlur" />
+                                  <feMergeNode in="SourceGraphic" />
                                 </feMerge>
                               </filter>
                             </defs>
                             
                             {/* Enhanced Grid */}
-                            {[0, 1, 2, 3, 4, 5, 6].map(i => (
-                              <line key={i} x1="50" y1={50 * i + 50} x2="450" y2={50 * i + 50} stroke="#374151" strokeWidth="1" opacity="0.2"/>
-                            ))}
-                            {[0, 1, 2, 3, 4, 5, 6, 7, 8].map(i => (
-                              <line key={i} x1={50 * i + 50} y1="50" x2={50 * i + 50} y2="300" stroke="#374151" strokeWidth="1" opacity="0.2"/>
-                            ))}
+                            {[0, 1, 2, 3, 4, 5, 6].map(i => <line key={i} x1="50" y1={50 * i + 50} x2="450" y2={50 * i + 50} stroke="#374151" strokeWidth="1" opacity="0.2" />)}
+                            {[0, 1, 2, 3, 4, 5, 6, 7, 8].map(i => <line key={i} x1={50 * i + 50} y1="50" x2={50 * i + 50} y2="300" stroke="#374151" strokeWidth="1" opacity="0.2" />)}
                             
                             {/* Historical Data Area */}
-                            <path
-                              d="M 50 200 Q 100 180 150 160 T 250 120 T 350 90 L 350 300 L 50 300 Z"
-                              fill="url(#primaryGradient)"
-                            />
+                            <path d="M 50 200 Q 100 180 150 160 T 250 120 T 350 90 L 350 300 L 50 300 Z" fill="url(#primaryGradient)" />
                             
                             {/* Historical Data Line */}
-                            <path
-                              d="M 50 200 Q 100 180 150 160 T 250 120 T 350 90"
-                              stroke="url(#lineGradient)"
-                              strokeWidth="4"
-                              fill="none"
-                              filter="url(#glow)"
-                              className="animate-pulse"
-                            />
+                            <path d="M 50 200 Q 100 180 150 160 T 250 120 T 350 90" stroke="url(#lineGradient)" strokeWidth="4" fill="none" filter="url(#glow)" className="animate-pulse" />
                             
                             {/* AI Prediction Line */}
-                            <path
-                              d="M 350 90 Q 380 75 410 65 T 450 50"
-                              stroke="url(#predictionGradient)"
-                              strokeWidth="4"
-                              fill="none"
-                              strokeDasharray="12,6"
-                              filter="url(#glow)"
-                              className="animate-pulse"
-                              style={{ animationDelay: '0.5s' }}
-                            />
+                            <path d="M 350 90 Q 380 75 410 65 T 450 50" stroke="url(#predictionGradient)" strokeWidth="4" fill="none" strokeDasharray="12,6" filter="url(#glow)" className="animate-pulse" style={{
+                            animationDelay: '0.5s'
+                          }} />
                             
                             {/* Data Points with Animation */}
-                            {[
-                              { x: 50, y: 200, color: "#06B6D4" },
-                              { x: 150, y: 160, color: "#3B82F6" },
-                              { x: 250, y: 120, color: "#8B5CF6" },
-                              { x: 350, y: 90, color: "#EC4899" }
-                            ].map((point, i) => (
-                              <g key={i}>
-                                <circle 
-                                  cx={point.x} 
-                                  cy={point.y} 
-                                  r="8" 
-                                  fill={point.color}
-                                  className="animate-pulse"
-                                  style={{ animationDelay: `${i * 0.3}s` }}
-                                  filter="url(#glow)"
-                                />
-                                <circle 
-                                  cx={point.x} 
-                                  cy={point.y} 
-                                  r="4" 
-                                  fill="white"
-                                  className="animate-pulse"
-                                  style={{ animationDelay: `${i * 0.3}s` }}
-                                />
-                              </g>
-                            ))}
+                            {[{
+                            x: 50,
+                            y: 200,
+                            color: "#06B6D4"
+                          }, {
+                            x: 150,
+                            y: 160,
+                            color: "#3B82F6"
+                          }, {
+                            x: 250,
+                            y: 120,
+                            color: "#8B5CF6"
+                          }, {
+                            x: 350,
+                            y: 90,
+                            color: "#EC4899"
+                          }].map((point, i) => <g key={i}>
+                                <circle cx={point.x} cy={point.y} r="8" fill={point.color} className="animate-pulse" style={{
+                              animationDelay: `${i * 0.3}s`
+                            }} filter="url(#glow)" />
+                                <circle cx={point.x} cy={point.y} r="4" fill="white" className="animate-pulse" style={{
+                              animationDelay: `${i * 0.3}s`
+                            }} />
+                              </g>)}
                             
                             {/* AI Prediction Points */}
-                            {[
-                              { x: 380, y: 75, color: "#10B981" },
-                              { x: 410, y: 65, color: "#06B6D4" },
-                              { x: 450, y: 50, color: "#3B82F6" }
-                            ].map((point, i) => (
-                              <g key={`pred-${i}`}>
-                                <circle 
-                                  cx={point.x} 
-                                  cy={point.y} 
-                                  r="6" 
-                                  fill={point.color}
-                                  className="animate-pulse"
-                                  style={{ animationDelay: `${i * 0.4 + 1}s` }}
-                                  opacity="0.8"
-                                />
-                                <circle 
-                                  cx={point.x} 
-                                  cy={point.y} 
-                                  r="12" 
-                                  fill="none"
-                                  stroke={point.color}
-                                  strokeWidth="2"
-                                  className="animate-ping"
-                                  style={{ animationDelay: `${i * 0.4 + 1}s` }}
-                                  opacity="0.3"
-                                />
-                              </g>
-                            ))}
+                            {[{
+                            x: 380,
+                            y: 75,
+                            color: "#10B981"
+                          }, {
+                            x: 410,
+                            y: 65,
+                            color: "#06B6D4"
+                          }, {
+                            x: 450,
+                            y: 50,
+                            color: "#3B82F6"
+                          }].map((point, i) => <g key={`pred-${i}`}>
+                                <circle cx={point.x} cy={point.y} r="6" fill={point.color} className="animate-pulse" style={{
+                              animationDelay: `${i * 0.4 + 1}s`
+                            }} opacity="0.8" />
+                                <circle cx={point.x} cy={point.y} r="12" fill="none" stroke={point.color} strokeWidth="2" className="animate-ping" style={{
+                              animationDelay: `${i * 0.4 + 1}s`
+                            }} opacity="0.3" />
+                              </g>)}
                             
                             {/* Value Labels */}
                             <text x="50" y="220" fill="#9CA3AF" fontSize="12" textAnchor="middle">$2.4M</text>
@@ -344,12 +285,8 @@ const Hero = () => {
                             <div className="text-center">
                               <div className="relative w-16 h-16 mx-auto mb-2">
                                 <svg className="w-16 h-16 transform -rotate-90" viewBox="0 0 100 100">
-                                  <circle cx="50" cy="50" r="35" stroke="#374151" strokeWidth="6" fill="none"/>
-                                  <circle
-                                    cx="50" cy="50" r="35" stroke="url(#lineGradient)" strokeWidth="6" fill="none"
-                                    strokeDasharray="220" strokeDashoffset="22"
-                                    className="animate-pulse"
-                                  />
+                                  <circle cx="50" cy="50" r="35" stroke="#374151" strokeWidth="6" fill="none" />
+                                  <circle cx="50" cy="50" r="35" stroke="url(#lineGradient)" strokeWidth="6" fill="none" strokeDasharray="220" strokeDashoffset="22" className="animate-pulse" />
                                 </svg>
                                 <div className="absolute inset-0 flex items-center justify-center">
                                   <span className="text-white font-bold text-sm">96%</span>
@@ -361,13 +298,10 @@ const Hero = () => {
                             <div className="text-center">
                               <div className="relative w-16 h-16 mx-auto mb-2">
                                 <svg className="w-16 h-16 transform -rotate-90" viewBox="0 0 100 100">
-                                  <circle cx="50" cy="50" r="35" stroke="#374151" strokeWidth="6" fill="none"/>
-                                  <circle
-                                    cx="50" cy="50" r="35" stroke="url(#predictionGradient)" strokeWidth="6" fill="none"
-                                    strokeDasharray="220" strokeDashoffset="44"
-                                    className="animate-pulse"
-                                    style={{ animationDelay: '0.5s' }}
-                                  />
+                                  <circle cx="50" cy="50" r="35" stroke="#374151" strokeWidth="6" fill="none" />
+                                  <circle cx="50" cy="50" r="35" stroke="url(#predictionGradient)" strokeWidth="6" fill="none" strokeDasharray="220" strokeDashoffset="44" className="animate-pulse" style={{
+                                  animationDelay: '0.5s'
+                                }} />
                                 </svg>
                                 <div className="absolute inset-0 flex items-center justify-center">
                                   <span className="text-white font-bold text-sm">87%</span>
@@ -443,8 +377,6 @@ const Hero = () => {
           </div>
         </div>
       </section>
-    </>
-  );
+    </>;
 };
-
 export default Hero;
