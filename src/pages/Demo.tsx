@@ -18,35 +18,25 @@ const Demo = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-red-900 via-orange-800 to-purple-900 relative overflow-hidden">
-      {/* Enhanced nebula effect */}
-      <div className="absolute inset-0 opacity-20">
-        {Array.from({ length: 100 }).map((_, i) => (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+      {/* Enhanced background effects to match landing page */}
+      <div className="absolute inset-0">
+        {/* Animated gradient orbs */}
+        <div className="absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-cyan-400/20 to-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-r from-indigo-500/10 to-purple-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>
+        
+        {/* Floating particles */}
+        {Array.from({ length: 50 }).map((_, i) => (
           <div
             key={i}
-            className="absolute rounded-full bg-white animate-pulse"
+            className="absolute rounded-full bg-white/10 animate-float"
             style={{
-              width: Math.random() * 4 + "px",
-              height: Math.random() * 4 + "px",
+              width: Math.random() * 3 + 1 + "px",
+              height: Math.random() * 3 + 1 + "px",
               top: Math.random() * 100 + "%",
               left: Math.random() * 100 + "%",
-              animationDuration: Math.random() * 5 + 2 + "s",
-              opacity: Math.random() * 0.7 + 0.3,
-            }}
-          />
-        ))}
-        
-        {/* Larger glowing elements */}
-        {Array.from({ length: 6 }).map((_, i) => (
-          <div
-            key={`glow-${i}`}
-            className="absolute rounded-full bg-orange-500/30 blur-3xl animate-float"
-            style={{
-              width: Math.random() * 200 + 100 + "px",
-              height: Math.random() * 200 + 100 + "px",
-              top: Math.random() * 100 + "%",
-              left: Math.random() * 100 + "%",
-              animationDuration: Math.random() * 15 + 20 + "s",
+              animationDuration: Math.random() * 10 + 10 + "s",
               animationDelay: Math.random() * 5 + "s",
             }}
           />
@@ -58,10 +48,13 @@ const Demo = () => {
           <>
             <div className="mb-12 text-center">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight">
-                Website Analytics Platform
+                <span className="bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 bg-clip-text text-transparent">
+                  AI-Powered
+                </span>{" "}
+                Analytics Platform
               </h1>
-              <p className="text-xl text-neutral-200 max-w-2xl mx-auto">
-                Enter your website URL below to get detailed analytics and insights about your online presence.
+              <p className="text-xl text-neutral-300 max-w-3xl mx-auto leading-relaxed">
+                Transform your business data into actionable insights. Enter your website or app store link below to get comprehensive analytics powered by AI.
               </p>
             </div>
             <UrlForm onSubmit={handleSubmit} />
@@ -70,9 +63,9 @@ const Demo = () => {
           <div className="animate-fade-in">
             <button
               onClick={handleBackToForm}
-              className="mb-8 flex items-center gap-2 text-white/70 hover:text-white transition-colors bg-white/10 px-4 py-2 rounded-md"
+              className="mb-8 flex items-center gap-2 text-white/70 hover:text-white transition-colors bg-white/10 backdrop-blur-sm px-6 py-3 rounded-lg border border-white/20 hover:bg-white/20"
             >
-              ← Back to URL form
+              ← Back to Platform
             </button>
             <AnalyticsDashboard url={url} />
           </div>
