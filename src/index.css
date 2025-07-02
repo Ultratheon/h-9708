@@ -5,25 +5,31 @@
 
 @layer base {
   :root {
-    --background: 0 0% 0%;
-    --foreground: 0 0% 100%;
+    --background: 0 0% 5%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 84% 60%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 14%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14%;
+    --muted-foreground: 0 0% 63%;
+    --accent: 0 72% 51%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 0 84% 60%;
     --radius: 0.5rem;
     
-    /* Gradient color variables */
-    --from-color-blue-400: #60a5fa;
-    --to-color-purple-500: #a855f7;
-    --from-color-orange-400: #fb923c;
-    --to-color-pink-500: #ec4899;
-    --from-color-blue-500: #3b82f6;
-    --to-color-cyan-400: #22d3ee;
-    --from-color-yellow-400: #facc15;
-    --to-color-orange-500: #f97316;
-    --from-color-emerald-400: #34d399;
-    --to-color-teal-500: #14b8a6;
-    --from-color-purple-400: #c084fc;
-    --to-color-pink-500: #ec4899;
-    --from-color-cyan-400: #22d3ee;
-    --to-color-blue-500: #3b82f6;
+    /* Red gradient color variables for hot magma theme */
+    --gradient-primary: linear-gradient(135deg, hsl(0, 84%, 60%), hsl(14, 91%, 60%));
+    --gradient-secondary: linear-gradient(135deg, hsl(0, 72%, 51%), hsl(0, 84%, 60%));
+    --gradient-accent: linear-gradient(135deg, hsl(14, 91%, 60%), hsl(0, 100%, 50%));
   }
 
   body {
