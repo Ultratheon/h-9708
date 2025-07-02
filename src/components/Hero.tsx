@@ -376,6 +376,12 @@ const Hero = () => {
             </div>
           </div>
         </div>
+        
+        <div className="mt-16 text-center">
+          <p className="text-xl text-gray-300 font-medium">
+            Connect your business → Analyze Data → Ask the important questions
+          </p>
+        </div>
       </section>
     </>;
 };
