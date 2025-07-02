@@ -2,9 +2,9 @@ import { ArrowRight } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
 const Hero = () => {
-  const topRowBubbles = ["Tell me how to integrate a BB6630", "Show me the sales month over month", "What country does my app downloads come from"];
-  const middleRowBubbles = ["Which wine is our best seller and why", "Generate the daily report on today", "Why am I losing orders despite rising traffic"];
-  const bottomRowBubbles = ["What product or customer trends are emerging over time", "How are discounts and promotions really affecting my margins"];
+  const topRowBubbles = ["How can i lower this months labor at my store?", "Show me the sales month over month", "What country does my app downloads come from"];
+  const middleRowBubbles = ["Which wine is our best seller and why", "Generate the daily report on today", "Why am I losing orders despite rising traffic", "Does this Ad resonate with my audience?"];
+  const bottomRowBubbles = ["What product or customer trends are emerging over time", "How are discounts and promotions really affecting my margins", "Can you create a margarita AD for todays holiday"];
   const duplicateForScroll = array => [...array, ...array];
   return <>
       <Helmet>
