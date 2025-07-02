@@ -11,25 +11,25 @@
     --card-foreground: 0 0% 98%;
     --popover: 0 0% 8%;
     --popover-foreground: 0 0% 98%;
-    --primary: 0 84% 60%;
+    --primary: 199 89% 48%;
     --primary-foreground: 0 0% 98%;
     --secondary: 0 0% 14%;
     --secondary-foreground: 0 0% 98%;
     --muted: 0 0% 14%;
     --muted-foreground: 0 0% 63%;
-    --accent: 0 72% 51%;
+    --accent: 204 94% 65%;
     --accent-foreground: 0 0% 98%;
     --destructive: 0 62% 30%;
     --destructive-foreground: 0 0% 98%;
     --border: 0 0% 20%;
     --input: 0 0% 20%;
-    --ring: 0 84% 60%;
+    --ring: 199 89% 48%;
     --radius: 0.5rem;
     
-    /* Red gradient color variables for hot magma theme */
-    --gradient-primary: linear-gradient(135deg, hsl(0, 84%, 60%), hsl(14, 91%, 60%));
-    --gradient-secondary: linear-gradient(135deg, hsl(0, 72%, 51%), hsl(0, 84%, 60%));
-    --gradient-accent: linear-gradient(135deg, hsl(14, 91%, 60%), hsl(0, 100%, 50%));
+    /* Sky blue neon gradient color variables */
+    --gradient-primary: linear-gradient(135deg, hsl(199, 89%, 48%), hsl(204, 94%, 65%));
+    --gradient-secondary: linear-gradient(135deg, hsl(197, 71%, 73%), hsl(199, 89%, 48%));
+    --gradient-accent: linear-gradient(135deg, hsl(204, 94%, 65%), hsl(212, 100%, 50%));
   }
 
   body {

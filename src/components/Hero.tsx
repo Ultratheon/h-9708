@@ -18,7 +18,7 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance leading-tight">
             <span className="text-white">
-              Grow your business with an <span className="bg-gradient-to-r from-red-600 via-red-500 to-red-400 bg-clip-text text-transparent">AI powered</span> Command Center
+              Grow your business with an <span className="bg-gradient-to-r from-cyan-400 via-sky-400 to-blue-400 bg-clip-text text-transparent">AI powered</span> Command Center
             </span>
           </h1>
           
