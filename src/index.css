@@ -93,7 +93,7 @@
 }
 
 .animate-unified-slide {
-  animation: unified-slide 35s linear infinite;
+  animation: unified-slide 45s linear infinite;
 }
 
 @keyframes float {
