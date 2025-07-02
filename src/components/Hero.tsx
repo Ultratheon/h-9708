@@ -22,7 +22,10 @@ const Hero = () => {
             </span>
           </h1>
           
-
+          <p className="text-xl text-gray-300 font-medium mb-8">
+            Connect your business → Analyze Data → Ask the important questions
+          </p>
+          
           <div className="mb-8 overflow-hidden relative">
             <div className="flex whitespace-nowrap animate-unified-slide mb-4 w-fit">
               {duplicateForScroll(topRowBubbles).map((text, index) => <div key={`top-${index}`} className="speech-bubble bg-neutral-800 text-white px-5 py-3 rounded-full text-base mx-3 inline-block font-medium shadow-lg">
@@ -375,12 +378,6 @@ const Hero = () => {
               </div>
             </div>
           </div>
-        </div>
-        
-        <div className="mt-16 text-center">
-          <p className="text-xl text-gray-300 font-medium">
-            Connect your business → Analyze Data → Ask the important questions
-          </p>
         </div>
       </section>
     </>;
