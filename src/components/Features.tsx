@@ -4,62 +4,51 @@ import { MessageSquare, Brain, Search, Zap } from "lucide-react";
 const features = [
   {
     title: "AI Chat with Web Browsing & Copywriting",
-    description: "Engage with an intelligent AI assistant that can browse the web for real-time information and create compelling copy for your business needs. Get instant answers, research insights, and professional content generation.",
+    description: "Engage with an intelligent AI assistant that can browse the web for real-time information and create compelling copy for your business needs.",
     icon: MessageSquare,
-    highlights: ["Real-time web research", "Professional copywriting", "Instant responses", "Content optimization"]
+    iconBg: "from-orange-400 to-yellow-500"
   },
   {
-    title: "Ads Creation & Content Strategy",
-    description: "Automatically generate high-converting advertisements and develop comprehensive content strategies. From social media campaigns to email marketing, create engaging content that drives results.",
+    title: "Ads Creation & Content Strategy", 
+    description: "Automatically generate high-converting advertisements and develop comprehensive content strategies for all platforms.",
     icon: Brain,
-    highlights: ["Auto ad generation", "Multi-platform campaigns", "Content calendar", "Performance optimization"]
+    iconBg: "from-cyan-400 to-blue-500"
   },
   {
     title: "Ultra Deep Business Audit & Market Research",
-    description: "Receive comprehensive business audits with critical scoring and in-depth market research. Identify opportunities, weaknesses, and strategic advantages in your industry landscape.",
+    description: "Receive comprehensive business audits with critical scoring and in-depth market research to identify opportunities.",
     icon: Search,
-    highlights: ["Critical scoring system", "Market analysis", "Opportunity identification", "Strategic insights"]
+    iconBg: "from-purple-400 to-pink-500"
   },
   {
     title: "Competitors, SEO, Metadata & Keywords",
-    description: "Analyze your competition, optimize your search presence, and discover high-value keywords. Get complete SEO insights including metadata optimization and competitive intelligence.",
+    description: "Analyze your competition, optimize your search presence, and discover high-value keywords for better rankings.",
     icon: Zap,
-    highlights: ["Competitor analysis", "SEO optimization", "Keyword research", "Metadata enhancement"]
+    iconBg: "from-green-400 to-emerald-500"
   },
 ];
 
 const Features = () => {
   return (
-    <section id="features" className="py-16 container-padding bg-neutral-900">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-white">
+    <section id="features" className="py-16 container-padding bg-gray-50">
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-900">
           Turn Your Business Data Into Conversations
         </h2>
-        <p className="text-neutral-400 text-center mb-12 max-w-2xl mx-auto">
+        <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
           Osiri transforms how you interact with your business information, making complex data accessible through natural language conversations.
         </p>
         
-        {/* Updated grid layout to match the image */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, index) => (
-            <div key={index} className="glass-card p-8 rounded-xl hover:border-neutral-600 transition-all group">
-              <div className="flex items-start gap-4 mb-4">
-                <div className="bg-gradient-to-br from-cyan-500/20 to-blue-600/20 p-4 rounded-xl border border-cyan-500/30">
-                  <feature.icon className="w-6 h-6 text-cyan-400" />
-                </div>
-                <div className="flex-1">
-                  <h3 className="font-bold text-xl text-white mb-3 group-hover:text-cyan-400 transition-colors">{feature.title}</h3>
+            <div key={index} className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+              <div className="mb-4">
+                <div className={`bg-gradient-to-br ${feature.iconBg} p-3 rounded-2xl w-fit`}>
+                  <feature.icon className="w-6 h-6 text-white" />
                 </div>
               </div>
-              
-              <div className="grid grid-cols-2 gap-2">
-                {feature.highlights.map((highlight, highlightIndex) => (
-                  <div key={highlightIndex} className="flex items-center gap-2 text-sm text-neutral-400">
-                    <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full"></div>
-                    <span>{highlight}</span>
-                  </div>
-                ))}
-              </div>
+              <h3 className="font-bold text-lg text-gray-900 mb-3">{feature.title}</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">{feature.description}</p>
             </div>
           ))}
         </div>
