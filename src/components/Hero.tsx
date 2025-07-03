@@ -70,7 +70,7 @@ const Hero = () => {
                   alt="AI Analytics Dashboard Preview"
                   className="w-full h-auto"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 via-neutral-900/60 to-transparent opacity-80"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 via-neutral-900/60 to-transparent opacity-80 hover:from-primary/30 hover:via-accent/20 hover:to-transparent transition-all duration-500"></div>
               </div>
             </div>
           </div>
