@@ -49,7 +49,6 @@ const Features = () => {
                 </div>
                 <div className="flex-1">
                   <h3 className="font-bold text-xl text-white mb-3 group-hover:text-cyan-400 transition-colors">{feature.title}</h3>
-                  <p className="text-neutral-300 text-base leading-relaxed mb-4">{feature.description}</p>
                 </div>
               </div>
               
