@@ -64,9 +64,13 @@ const Hero = () => {
         <div className="mt-4 w-full py-8 -mx-6 md:-mx-8 lg:-mx-12">
           <div className="max-w-7xl mx-auto px-6">
             <div className="glass-card rounded-xl p-6 backdrop-blur-lg bg-neutral-900/40 border border-neutral-800/30 shadow-xl hover:shadow-2xl transition-all duration-300">
-              <div className="rounded-lg overflow-hidden">
-                {/* Revolutionary AI Analytics Dashboard */}
-                
+              <div className="rounded-lg overflow-hidden relative">
+                <img 
+                  src="/lovable-uploads/07c348da-ce97-41ee-931e-c6ee2dedcf1c.png" 
+                  alt="AI Analytics Dashboard Preview"
+                  className="w-full h-auto"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 via-neutral-900/60 to-transparent opacity-80"></div>
               </div>
             </div>
           </div>
