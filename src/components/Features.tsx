@@ -82,7 +82,7 @@ const Features = () => {
                     <img 
                       src={image} 
                       alt={`Slide ${index + 1}`}
-                      className="w-full object-contain bg-neutral-900"
+                      className="w-full object-contain"
                     />
                   </div>
                 ))}
