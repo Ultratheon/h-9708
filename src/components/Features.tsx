@@ -72,8 +72,8 @@ const Features = () => {
         {/* Image Carousel */}
         <div className="mt-16">
           <div className="relative max-w-4xl mx-auto">
-            <div className="overflow-hidden rounded-xl bg-neutral-800">
-              <div 
+            <div className="overflow-hidden rounded-xl">
+              <div
                 className="flex transition-transform duration-300 ease-in-out"
                 style={{ transform: `translateX(-${currentSlide * 100}%)` }}
               >
