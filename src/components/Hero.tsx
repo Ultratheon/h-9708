@@ -68,9 +68,9 @@ const Hero = () => {
                 <img 
                   src="/lovable-uploads/07c348da-ce97-41ee-931e-c6ee2dedcf1c.png" 
                   alt="AI Analytics Dashboard Preview"
-                  className="w-full h-auto"
+                  className="w-full h-auto hover:saturate-150 hover:brightness-110 transition-all duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 via-neutral-900/60 to-transparent opacity-80 hover:from-primary/30 hover:via-accent/20 hover:to-transparent transition-all duration-500"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 via-neutral-900/60 to-transparent opacity-80"></div>
               </div>
             </div>
           </div>
