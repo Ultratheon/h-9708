@@ -21,18 +21,18 @@ const Testimonials = () => {
   }];
 
   return (
-    <section className="py-16 container-padding bg-neutral-50">
+    <section className="py-16 container-padding bg-neutral-900">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-neutral-900">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-white">
           What Our Customers Say
         </h2>
-        <p className="text-neutral-600 text-center mb-12 max-w-2xl mx-auto">
+        <p className="text-neutral-400 text-center mb-12 max-w-2xl mx-auto">
           See how businesses are transforming their operations with OsiriAI
         </p>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-white p-6 rounded-xl shadow-sm border border-neutral-200">
+            <div key={index} className="bg-neutral-800 p-6 rounded-xl border border-neutral-700">
               <div className="flex items-center mb-4">
                 <img 
                   src={testimonial.avatar} 
@@ -40,8 +40,8 @@ const Testimonials = () => {
                   className="w-12 h-12 rounded-full object-cover mr-4"
                 />
                 <div>
-                  <h4 className="font-semibold text-neutral-900">{testimonial.name}</h4>
-                  <p className="text-neutral-600 text-sm">{testimonial.role}</p>
+                  <h4 className="font-semibold text-white">{testimonial.name}</h4>
+                  <p className="text-neutral-400 text-sm">{testimonial.role}</p>
                 </div>
               </div>
               <div className="flex mb-4">
@@ -49,7 +49,7 @@ const Testimonials = () => {
                   <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
                 ))}
               </div>
-              <p className="text-neutral-700 leading-relaxed">{testimonial.content}</p>
+              <p className="text-neutral-300 leading-relaxed">{testimonial.content}</p>
             </div>
           ))}
         </div>
