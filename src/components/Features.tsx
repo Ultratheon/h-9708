@@ -1,5 +1,6 @@
 
-import { MessageSquare, Brain, Search, Zap } from "lucide-react";
+import { MessageSquare, Brain, Search, Zap, ChevronLeft, ChevronRight } from "lucide-react";
+import { useState } from "react";
 
 const features = [
   {
@@ -28,7 +29,22 @@ const features = [
   },
 ];
 
+const carouselImages = [
+  "/lovable-uploads/555b3f2d-e34e-439e-8009-9a2c4149156c.png",
+  "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=800&h=600&fit=crop",
+  "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=600&fit=crop"
+];
+
 const Features = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % carouselImages.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + carouselImages.length) % carouselImages.length);
+  };
   return (
     <section id="features" className="py-16 container-padding bg-neutral-900">
       <div className="max-w-6xl mx-auto">
@@ -51,6 +67,55 @@ const Features = () => {
               <p className="text-neutral-300 text-sm leading-relaxed">{feature.description}</p>
             </div>
           ))}
+        </div>
+
+        {/* Image Carousel */}
+        <div className="mt-16">
+          <div className="relative max-w-4xl mx-auto">
+            <div className="overflow-hidden rounded-xl bg-neutral-800">
+              <div 
+                className="flex transition-transform duration-300 ease-in-out"
+                style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+              >
+                {carouselImages.map((image, index) => (
+                  <div key={index} className="w-full flex-shrink-0">
+                    <img 
+                      src={image} 
+                      alt={`Slide ${index + 1}`}
+                      className="w-full h-96 object-cover"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+            
+            {/* Navigation Buttons */}
+            <button
+              onClick={prevSlide}
+              className="absolute left-4 top-1/2 -translate-y-1/2 bg-neutral-800/80 hover:bg-neutral-700 text-white p-2 rounded-full transition-colors"
+            >
+              <ChevronLeft className="w-6 h-6" />
+            </button>
+            <button
+              onClick={nextSlide}
+              className="absolute right-4 top-1/2 -translate-y-1/2 bg-neutral-800/80 hover:bg-neutral-700 text-white p-2 rounded-full transition-colors"
+            >
+              <ChevronRight className="w-6 h-6" />
+            </button>
+
+            {/* Dots Indicator */}
+            <div className="flex justify-center mt-6 space-x-2">
+              {carouselImages.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentSlide(index)}
+                  className={`w-2 h-2 rounded-full transition-colors ${
+                    index === currentSlide ? 'bg-white' : 'bg-neutral-600'
+                  }`}
+                />
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>
