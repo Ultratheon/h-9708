@@ -31,7 +31,7 @@ const features = [
 
 const carouselImages = [
   "/lovable-uploads/555b3f2d-e34e-439e-8009-9a2c4149156c.png",
-  "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=800&h=600&fit=crop",
+  "/lovable-uploads/98f2fccb-7d37-422a-b39c-dfac1a8057f1.png",
   "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=600&fit=crop"
 ];
 
