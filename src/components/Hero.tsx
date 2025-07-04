@@ -69,7 +69,7 @@ const Hero = () => {
                 alt="AI Analytics Dashboard Preview"
                 className="w-full h-auto rounded-lg"
                 style={{
-                  boxShadow: '0 8px 60px 12px hsl(199 95% 50% / 0.9), 0 12px 120px 24px hsl(199 95% 50% / 0.5)'
+                  boxShadow: '0 8px 40px 8px hsl(199 95% 50% / 0.7), 0 12px 80px 16px hsl(199 95% 50% / 0.4)'
                 }}
               />
             </div>
