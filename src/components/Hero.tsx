@@ -63,13 +63,13 @@ const Hero = () => {
         
         <div className="mt-4 w-full py-8 -mx-6 md:-mx-8 lg:-mx-12">
           <div className="max-w-7xl mx-auto px-6">
-            <div className="rounded-lg overflow-hidden">
+            <div className="rounded-lg p-8">
               <img 
                 src="/lovable-uploads/8c10b2ab-67bb-4bf2-95e9-11b8511d8f38.png" 
                 alt="AI Analytics Dashboard Preview"
                 className="w-full h-auto rounded-lg"
                 style={{
-                  boxShadow: '0 0 40px 8px hsl(var(--primary) / 0.6), 0 0 80px 16px hsl(var(--primary) / 0.3)'
+                  boxShadow: '0 0 60px 12px hsl(199 89% 48% / 0.8), 0 0 120px 24px hsl(199 89% 48% / 0.4)'
                 }}
               />
             </div>
