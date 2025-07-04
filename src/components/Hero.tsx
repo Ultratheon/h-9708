@@ -65,9 +65,12 @@ const Hero = () => {
           <div className="max-w-7xl mx-auto px-6">
             <div className="rounded-lg overflow-hidden">
               <img 
-                src="/lovable-uploads/07c348da-ce97-41ee-931e-c6ee2dedcf1c.png" 
+                src="/lovable-uploads/8c10b2ab-67bb-4bf2-95e9-11b8511d8f38.png" 
                 alt="AI Analytics Dashboard Preview"
-                className="w-full h-auto"
+                className="w-full h-auto rounded-lg"
+                style={{
+                  boxShadow: '0 0 20px 2px hsl(var(--primary) / 0.3)'
+                }}
               />
             </div>
           </div>
