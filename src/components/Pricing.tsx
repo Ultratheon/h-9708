@@ -25,7 +25,7 @@ const Pricing = () => {
         </p>
         
         <div className="flex justify-center mb-8">
-          <Tabs defaultValue="monthly" className="w-fit">
+          <Tabs defaultValue="monthly" className="w-fit mx-auto">
             <TabsList className="bg-neutral-800 border border-neutral-700">
               <TabsTrigger value="monthly" className="text-white data-[state=active]:bg-neutral-700">
                 Monthly
